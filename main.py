@@ -1,49 +1,55 @@
 from src.data_loader import UCIHARDataLoader
 from src.partition import UserPartitioner
+from src.normalize import ClientNormalizer
 
 def main():
-    # Initialize loader
+    import pandas as pd
+
+    # Load dataset
     data_path = "data/UCI_HAR"
     loader = UCIHARDataLoader(data_path)
 
-    # Load dataset
     train_df, test_df = loader.load_full_dataset()
 
-    print("\n--- DATASET LOADED SUCCESSFULLY ---\n")
-    print("Train Shape:", train_df.shape)
-    print("Test Shape:", test_df.shape)
+    print("\n--- DATASET LOADED ---")
 
-    # User-wise Partitioning
+    # Partition into clients
     partitioner = UserPartitioner(train_df, test_df)
-
-    # Create client datasets
     client_datasets = partitioner.create_clients()
 
     print("\n--- CLIENT DATASETS CREATED ---")
-    print("Total Clients:", len(client_datasets))
 
-    # Show sample clients
-    sample_clients = list(client_datasets.keys())[:3]
-    for cid in sample_clients:
-        print(f"\nClient {cid} Shape:", client_datasets[cid].shape)
-
-    # Split each client dataset
+    # Split clients
     client_splits = partitioner.split_clients(client_datasets)
 
-    print("\n--- CLIENT TRAIN/TEST SPLIT DONE ---")
+    print("\n--- CLIENT SPLITS DONE ---")
+
+    # PER-CLIENT NORMALIZATION
+    normalizer = ClientNormalizer()
+
+    for client_id, data in client_splits.items():
+        X_train = data["X_train"]
+        X_test = data["X_test"]
+
+        # Fit ONLY on train data (VERY IMPORTANT)
+        X_train_norm = normalizer.fit_transform(X_train, client_id)
+
+        # Apply same stats to test data
+        X_test_norm = normalizer.transform(X_test, client_id)
+
+        # Replace with normalized data
+        client_splits[client_id]["X_train"] = X_train_norm
+        client_splits[client_id]["X_test"] = X_test_norm
+
+    print("\n--- PER-CLIENT NORMALIZATION DONE ---")
+
+    # Debug check
+    sample_clients = list(client_splits.keys())[:3]
 
     for cid in sample_clients:
-        if cid in client_splits:
-            print(f"\nClient {cid}:")
-            print("Train Shape:", client_splits[cid]["X_train"].shape)
-            print("Test Shape:", client_splits[cid]["X_test"].shape)
-
-    # Summary statistics
-    summary = partitioner.get_client_summary(client_datasets)
-
-    print("\n--- CLIENT SUMMARY ---")
-    for cid in sample_clients:
-        print(f"Client {cid} -> Samples: {summary[cid]['num_samples']}, Activities: {summary[cid]['num_activities']}")
+        print(f"\nClient {cid}")
+        print("Train mean:", client_splits[cid]["X_train"].mean().mean())
+        print("Train std:", client_splits[cid]["X_train"].std().mean())
 
 
 if __name__ == "__main__":
