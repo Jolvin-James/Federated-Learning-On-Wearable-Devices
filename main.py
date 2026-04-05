@@ -24,6 +24,9 @@ def main():
 
     print("\n--- CLIENT SPLITS DONE ---")
 
+    # Validate splits
+    partitioner.validate_splits(client_splits)
+
     # PER-CLIENT NORMALIZATION
     normalizer = ClientNormalizer()
 
@@ -31,10 +34,8 @@ def main():
         X_train = data["X_train"]
         X_test = data["X_test"]
 
-        # Fit ONLY on train data (VERY IMPORTANT)
+        # Fit ONLY on train data and test data
         X_train_norm = normalizer.fit_transform(X_train, client_id)
-
-        # Apply same stats to test data
         X_test_norm = normalizer.transform(X_test, client_id)
 
         # Replace with normalized data
@@ -42,15 +43,6 @@ def main():
         client_splits[client_id]["X_test"] = X_test_norm
 
     print("\n--- PER-CLIENT NORMALIZATION DONE ---")
-
-    # Debug check
-    sample_clients = list(client_splits.keys())[:3]
-
-    for cid in sample_clients:
-        print(f"\nClient {cid}")
-        print("Train mean:", client_splits[cid]["X_train"].mean().mean())
-        print("Train std:", client_splits[cid]["X_train"].std().mean())
-
 
 if __name__ == "__main__":
     main()
