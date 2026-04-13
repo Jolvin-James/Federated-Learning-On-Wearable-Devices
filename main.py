@@ -194,6 +194,18 @@ def main():
     if args.mode in ['federated', 'both']:
         clients, global_model = setup_federated_clients(client_splits, device)
 
+        print("\n--- Testing Local Training ---")
+
+        for client_id, client in clients.items():
+            data = client_splits[client_id]
+
+            updated_weights = client.local_train(
+                data["X_train"],
+                data["y_train"],
+                epochs=2
+            )
+
+            print(f"[Client {client_id}] Training complete\n")
 
 if __name__ == "__main__":
     main()
