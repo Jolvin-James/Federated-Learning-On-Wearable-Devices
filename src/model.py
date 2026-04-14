@@ -19,10 +19,8 @@ class HAR_CNN(nn.Module):
         self.pool = nn.MaxPool1d(2)
         self.dropout = nn.Dropout(0.5)
 
-        self._to_linear = None
-
-        # Placeholder (will reset later)
-        self.fc1 = nn.Linear(128, 128)
+        # Explicitly set based on input shape of (batch, 9, 128)
+        self.fc1 = nn.Linear(1792, 128)
         self.fc2 = nn.Linear(128, num_classes)
 
     def _forward_conv(self, x):
@@ -33,11 +31,6 @@ class HAR_CNN(nn.Module):
 
     def forward(self, x):
         x = self._forward_conv(x)
-
-        if self._to_linear is None:
-            self._to_linear = x.view(x.size(0), -1).shape[1]
-            self.fc1 = nn.Linear(self._to_linear, 128).to(x.device)
-
         x = x.view(x.size(0), -1)
         x = self.dropout(F.relu(self.fc1(x)))
         x = self.fc2(x)

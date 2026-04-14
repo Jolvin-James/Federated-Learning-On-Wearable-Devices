@@ -31,6 +31,26 @@ class FLClient:
         safe_weights = copy.deepcopy(global_weights)
         self.model.load_state_dict(safe_weights)
 
+    # COMPUTE GRADIENT UPDATE (ΔW)
+    def compute_weight_update(self, old_weights, new_weights):
+        """
+        Compute delta between weights:
+        ΔW = W_new - W_old
+
+        Args:
+            old_weights (dict): Initial global weights
+            new_weights (dict): Locally updated weights
+
+        Returns:
+            dict: Weight updates (delta)
+        """
+        delta = {}
+
+        for key in old_weights.keys():
+            delta[key] = new_weights[key] - old_weights[key]
+
+        return delta
+
     # LOCAL TRAINING LOOP
     def local_train(
         self,
@@ -43,21 +63,26 @@ class FLClient:
         """
         Train the client model locally
 
-        Args:
-            X_train (DataFrame): Features
-            y_train (Series): Labels
         Returns:
             dict: Updated model weights
         """
 
+        # SAVE INITIAL (GLOBAL) WEIGHTS
+        initial_weights = {
+            k: v.clone().detach()
+            for k, v in self.model.state_dict().items()
+        }
+
         # DATA PREPARATION
         X_tensor = reshape_for_cnn(X_train)
+
         y_tensor = torch.tensor(
             y_train.values.squeeze() - 1,
             dtype=torch.long
         )
 
         dataset = TensorDataset(X_tensor, y_tensor)
+
         loader = DataLoader(
             dataset,
             batch_size=batch_size,
@@ -66,6 +91,7 @@ class FLClient:
 
         # TRAINING SETUP
         criterion = torch.nn.CrossEntropyLoss()
+
         optimizer = torch.optim.Adam(
             self.model.parameters(),
             lr=lr
@@ -99,8 +125,27 @@ class FLClient:
                 f"| Loss: {avg_loss:.4f}"
             )
 
-        # RETURN UPDATED WEIGHTS
-        return self.get_weights()
+        # GET UPDATED WEIGHTS
+        updated_weights = self.get_weights()
+
+        # COMPUTE ΔW (GRADIENT UPDATE)
+        delta_weights = self.compute_weight_update(
+            initial_weights,
+            updated_weights
+        )
+
+        # DEBUG / ANALYSIS 
+        total_update_norm = sum(
+            torch.norm(v.float()).item() for v in delta_weights.values()
+        )
+
+        print(
+            f"[Client {self.client_id}] "
+            f"Update magnitude (Delta W norm): {total_update_norm:.4f}"
+        )
+
+        # RETURN UPDATED WEIGHTS (FedAvg compatible)
+        return updated_weights
 
     # UTILITIES
     def get_model(self):

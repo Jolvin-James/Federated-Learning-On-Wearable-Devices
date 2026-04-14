@@ -159,6 +159,42 @@ def setup_federated_clients(client_splits, device):
         
     return clients, global_model
 
+def run_federated_round(clients, client_splits):
+    """
+    Executes ONE federated learning round:
+    - Each client trains locally
+    - Returns updated weights
+    - Collects all client updates for server
+    """
+
+    print("\n--- Federated Round 1: Client Training & Weight Return ---")
+
+    client_updates = []
+
+    for client_id, client in clients.items():
+        data = client_splits[client_id]
+
+        print(f"\n[Client {client_id}] Starting local training...")
+
+        # LOCAL TRAINING
+        updated_weights = client.local_train(
+            data["X_train"],
+            data["y_train"],
+            epochs=2
+        )
+
+        # RETURN MODEL WEIGHTS
+        client_updates.append({
+            "client_id": client_id,
+            "weights": updated_weights,          # model.state_dict()
+            "num_samples": len(data["X_train"])  # required for FedAvg
+        })
+
+        print(f"[Client {client_id}] Weights sent to server")
+
+    print("\n--- All Client Weights Collected ---")
+
+    return client_updates
 
 def main():
     # Setup Argument Parser
@@ -194,18 +230,24 @@ def main():
     if args.mode in ['federated', 'both']:
         clients, global_model = setup_federated_clients(client_splits, device)
 
-        print("\n--- Testing Local Training ---")
+        print("\n--- Running Federated Learning Round ---")
 
-        for client_id, client in clients.items():
-            data = client_splits[client_id]
+        client_updates = run_federated_round(clients, client_splits)
 
-            updated_weights = client.local_train(
-                data["X_train"],
-                data["y_train"],
-                epochs=2
+        # DEBUG: Inspect what is being sent (Privacy Validation)
+        print("\n--- Inspecting Client Payloads ---")
+
+        for update in client_updates:
+            weights = update["weights"]
+
+            # Check one tensor
+            first_tensor = list(weights.values())[0]
+
+            print(
+                f"Client {update['client_id']} -> "
+                f"Samples: {update['num_samples']} | "
+                f"Tensor Shape: {tuple(first_tensor.shape)}"
             )
-
-            print(f"[Client {client_id}] Training complete\n")
 
 if __name__ == "__main__":
     main()
