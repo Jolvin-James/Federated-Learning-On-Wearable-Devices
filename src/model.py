@@ -1,10 +1,12 @@
 # src/model.py
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+
 class HAR_CNN(nn.Module):
-    def __init__(self, num_classes=6):
+    def __init__(self, num_classes=6, dropout_rate=0.3):
         super(HAR_CNN, self).__init__()
 
         self.conv1 = nn.Conv1d(9, 32, kernel_size=3)
@@ -17,9 +19,8 @@ class HAR_CNN(nn.Module):
         self.bn3 = nn.BatchNorm1d(128)
 
         self.pool = nn.MaxPool1d(2)
-        self.dropout = nn.Dropout(0.5)
+        self.dropout = nn.Dropout(dropout_rate)
 
-        # Explicitly set based on input shape of (batch, 9, 128)
         self.fc1 = nn.Linear(1792, 128)
         self.fc2 = nn.Linear(128, num_classes)
 
@@ -34,5 +35,4 @@ class HAR_CNN(nn.Module):
         x = x.view(x.size(0), -1)
         x = self.dropout(F.relu(self.fc1(x)))
         x = self.fc2(x)
-
         return x
