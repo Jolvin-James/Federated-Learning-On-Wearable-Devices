@@ -1,31 +1,23 @@
 # src/server.py
+
 import copy
 import torch
 
+
 class FederatedServer:
-    def __init__(self):
+    def __init__(self, model=None):
         """
-        Federated Server to manage client updates and aggregation
+        Federated Server to manage:
+        - Client updates
+        - Aggregation
+        - Global model state
         """
         self.client_updates = []
         self.total_samples = 0
+        self.global_model = model
 
+    # COLLECT CLIENT UPDATES
     def collect_updates(self, client_updates: list):
-        """
-        Collect updates from all clients
-
-        Args:
-            client_updates (list):
-                [
-                    {
-                        "client_id": int,
-                        "weights": state_dict,
-                        "num_samples": int
-                    },
-                    ...
-                ]
-        """
-
         print("\n[SERVER] ===== Collecting Client Updates =====")
 
         if not isinstance(client_updates, list):
@@ -37,115 +29,126 @@ class FederatedServer:
         self.client_updates = []
         self.total_samples = 0
 
-        for idx, update in enumerate(client_updates):
+        for update in client_updates:
+            if not isinstance(update, dict):
+                raise TypeError("[SERVER ERROR] Each update must be a dict")
 
             required_keys = ["client_id", "weights", "num_samples"]
-            if not all(key in update for key in required_keys):
-                raise ValueError(
-                    f"[SERVER ERROR] Missing keys in update {idx}. "
-                    f"Required: {required_keys}"
-                )
+            if not all(k in update for k in required_keys):
+                raise ValueError(f"[SERVER ERROR] Missing keys in client update: {update}")
 
             client_id = update["client_id"]
             weights = update["weights"]
             num_samples = update["num_samples"]
 
-            if not isinstance(client_id, int):
-                raise TypeError("[SERVER ERROR] client_id must be int")
-
             if not isinstance(weights, dict):
-                raise TypeError("[SERVER ERROR] weights must be dict")
+                raise TypeError(f"[SERVER ERROR] Invalid weights from Client {client_id}")
 
             if not isinstance(num_samples, int) or num_samples <= 0:
-                raise ValueError("[SERVER ERROR] num_samples must be positive int")
-
-            # Validate tensor structure
-            first_tensor = list(weights.values())[0]
-            try:
-                _ = first_tensor.shape
-            except Exception:
-                raise ValueError("[SERVER ERROR] Invalid tensor in weights")
+                raise ValueError(f"[SERVER ERROR] Invalid sample count from Client {client_id}")
 
             self.client_updates.append(update)
             self.total_samples += num_samples
 
-            print(
-                f"[SERVER] Client {client_id} | "
-                f"Samples: {num_samples} | "
-                f"Layers: {len(weights)}"
-            )
+            print(f"[SERVER] Client {client_id} | Samples: {num_samples}")
 
-        print("\n[SERVER] ===== Summary =====")
-        print(f"[SERVER] Total Clients : {len(self.client_updates)}")
+        if self.total_samples == 0:
+            raise ValueError("[SERVER ERROR] Total samples is zero")
+
         print(f"[SERVER] Total Samples: {self.total_samples}")
 
         return self.client_updates
 
+    # FEDAVG AGGREGATION
     def fedavg_aggregate(self):
-        """
-        Perform FedAvg aggregation
-
-        Formula:
-            W_global = Σ (Wi * ni / N)
-
-        Returns:
-            dict: aggregated global weights
-        """
-
-        print("\n[SERVER] ===== FedAvg Aggregation Started =====")
+        print("\n[SERVER] ===== FedAvg Aggregation =====")
 
         if not self.client_updates:
-            raise ValueError("[SERVER ERROR] No client updates to aggregate")
-
-        if self.total_samples == 0:
-            raise ValueError("[SERVER ERROR] Total samples cannot be zero")
+            raise ValueError("[SERVER ERROR] No updates to aggregate")
 
         total_samples = self.total_samples
 
-        # Use reference weights to ensure types match at the end
         reference_weights = self.client_updates[0]["weights"]
         global_weights = {}
 
-        # --- INITIALIZE GLOBAL WEIGHTS AS FLOATS ---
+        # Initialize accumulator
         for key, val in reference_weights.items():
-            # Use float32 to avoid RuntimeError when adding float tensors to Long tensors (like num_batches_tracked)
             global_weights[key] = torch.zeros_like(val, dtype=torch.float32)
 
-        # --- WEIGHTED AGGREGATION ---
+        # Weighted aggregation
         for update in self.client_updates:
-            client_id = update["client_id"]
             weights = update["weights"]
             num_samples = update["num_samples"]
 
             weight_factor = num_samples / total_samples
 
-            print(
-                f"[SERVER] Aggregating Client {client_id} | "
-                f"Weight Factor: {weight_factor:.4f}"
-            )
+            for key in global_weights:
+                global_weights[key] += weights[key].float() * weight_factor
 
-            for key in global_weights.keys():
-                # Cast client weight to float and detach, effectively avoiding graph dependencies
-                # and type casting errors.
-                global_weights[key] += (weights[key].to(torch.float32).detach() * weight_factor)
-
-        # --- RESTORE ORIGINAL DTYPES ---
-        for key in global_weights.keys():
+        # Restore original dtype
+        for key in global_weights:
             global_weights[key] = global_weights[key].to(reference_weights[key].dtype)
 
-        print("\n[SERVER] ===== Aggregation Complete =====")
+        print("[SERVER] Aggregation Complete")
 
         return global_weights
 
-    def get_total_samples(self):
-        return self.total_samples
+    # UPDATE GLOBAL MODEL
+    def update_global_model(self, global_weights: dict):
+        print("\n[SERVER] ===== Updating Global Model =====")
 
-    def get_client_updates(self):
-        return self.client_updates
+        if self.global_model is None:
+            raise ValueError("[SERVER ERROR] Global model not initialized")
+
+        if not isinstance(global_weights, dict):
+            raise TypeError("[SERVER ERROR] global_weights must be dict")
+
+        # Validate keys
+        model_keys = set(self.global_model.state_dict().keys())
+        weight_keys = set(global_weights.keys())
+
+        if model_keys != weight_keys:
+            raise ValueError("[SERVER ERROR] Model & weight mismatch")
+
+        # Debug norms
+        old_norm = self._compute_model_norm(self.global_model.state_dict())
+
+        # Update model safely
+        self.global_model.load_state_dict(copy.deepcopy(global_weights))
+
+        new_norm = self._compute_model_norm(self.global_model.state_dict())
+
+        print("[SERVER] Model updated successfully")
+        print(f"[DEBUG] Norm Before: {old_norm:.4f}")
+        print(f"[DEBUG] Norm After : {new_norm:.4f}")
+
+        return self.global_model
+
+    # BROADCAST BACK
+    def broadcast_global_model(self, clients: dict):
+        print("\n[SERVER] ===== Broadcasting Global Model =====")
+
+        if self.global_model is None:
+            raise ValueError("[SERVER ERROR] Global model not initialized")
+
+        if not isinstance(clients, dict) or len(clients) == 0:
+            raise ValueError("[SERVER ERROR] No clients available for broadcast")
+
+        global_weights = self.global_model.state_dict()
+
+        for client_id, client in clients.items():
+            client.receive_global_model(copy.deepcopy(global_weights))
+            print(f"[SERVER] Global model sent to Client {client_id}")
+
+        print("[SERVER] Broadcast Complete")
+
+    # UTILITIES
+    def _compute_model_norm(self, weights):
+        return sum(torch.norm(v.float()).item() for v in weights.values())
+
+    def get_global_model(self):
+        return self.global_model
 
     def clear_updates(self):
-        """
-        Clear stored updates (important for next round)
-        """
         self.client_updates = []
         self.total_samples = 0
