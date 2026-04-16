@@ -14,6 +14,7 @@ from src.centralized_data import CentralizedDataBuilder
 from src.model import HAR_CNN
 from src.model_utils import reshape_for_cnn
 from src.client import FLClient
+from src.server import FederatedServer
 
 
 def train(model, loader, criterion, optimizer, device):
@@ -232,15 +233,23 @@ def main():
 
         print("\n--- Running Federated Learning Round ---")
 
+        # RUN FEDERATED ROUND (CLIENT SIDE)
         client_updates = run_federated_round(clients, client_splits)
 
-        # DEBUG: Inspect what is being sent (Privacy Validation)
+        # COLLECT CLIENT UPDATES (SERVER SIDE)
+        server = FederatedServer()
+
+        collected_updates = server.collect_updates(client_updates)
+
+        global_weights = server.fedavg_aggregate()
+
+        print("\n--- Global Model Aggregated Successfully ---")
+
+        # DEBUG: Inspect payload (Privacy Validation)
         print("\n--- Inspecting Client Payloads ---")
 
-        for update in client_updates:
+        for update in collected_updates:
             weights = update["weights"]
-
-            # Check one tensor
             first_tensor = list(weights.values())[0]
 
             print(
@@ -248,6 +257,10 @@ def main():
                 f"Samples: {update['num_samples']} | "
                 f"Tensor Shape: {tuple(first_tensor.shape)}"
             )
+
+        # Update the global model with the aggregated weights from FedAvg
+        global_model.load_state_dict(global_weights)
+        print("\n[SERVER] Global model successfully updated with aggregated weights.")
 
 if __name__ == "__main__":
     main()
