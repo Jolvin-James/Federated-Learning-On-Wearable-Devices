@@ -3,6 +3,7 @@
 import copy
 import torch
 from torch.utils.data import DataLoader, TensorDataset
+from sklearn.metrics import accuracy_score, f1_score
 
 from src.model import HAR_CNN
 from src.model_utils import reshape_for_cnn
@@ -11,38 +12,33 @@ from src.model_utils import reshape_for_cnn
 class FLClient:
     def __init__(self, client_id, device):
         """
-        Initialize a federated learning client
+        Federated Learning Client
 
         Args:
-            client_id (int): Unique client identifier
-            device (torch.device): CPU or GPU
+            client_id (int): unique client id
+            device (torch.device): cpu / cuda
         """
         self.client_id = client_id
         self.device = device
 
-        # Each client maintains its own model instance
+        # Each client has its own local model
         self.model = HAR_CNN().to(self.device)
 
-    # RECEIVE GLOBAL MODEL
+    # Receive Global Model
     def receive_global_model(self, global_weights: dict):
+        """
+        Load global model weights sent by server
+        """
         if not isinstance(global_weights, dict):
-            raise TypeError("Global weights must be a state_dict (dict)")
+            raise TypeError("Global weights must be state_dict")
 
         safe_weights = copy.deepcopy(global_weights)
         self.model.load_state_dict(safe_weights)
 
-    # COMPUTE GRADIENT UPDATE (ΔW)
+    # Compute Weight Update
     def compute_weight_update(self, old_weights, new_weights):
         """
-        Compute delta between weights:
         ΔW = W_new - W_old
-
-        Args:
-            old_weights (dict): Initial global weights
-            new_weights (dict): Locally updated weights
-
-        Returns:
-            dict: Weight updates (delta)
         """
         delta = {}
 
@@ -51,7 +47,7 @@ class FLClient:
 
         return delta
 
-    # LOCAL TRAINING LOOP
+    # Local Training
     def local_train(
         self,
         X_train,
@@ -61,19 +57,19 @@ class FLClient:
         lr=0.001
     ):
         """
-        Train the client model locally
+        Local training on client data
 
         Returns:
-            dict: Updated model weights
+            updated model weights
         """
 
-        # SAVE INITIAL (GLOBAL) WEIGHTS
+        # Save initial weights
         initial_weights = {
             k: v.clone().detach()
             for k, v in self.model.state_dict().items()
         }
 
-        # DATA PREPARATION
+        # Convert input
         X_tensor = reshape_for_cnn(X_train)
 
         y_tensor = torch.tensor(
@@ -89,7 +85,6 @@ class FLClient:
             shuffle=True
         )
 
-        # TRAINING SETUP
         criterion = torch.nn.CrossEntropyLoss()
 
         optimizer = torch.optim.Adam(
@@ -99,20 +94,23 @@ class FLClient:
 
         self.model.train()
 
-        # LOCAL TRAINING LOOP
         for epoch in range(epochs):
-            total_loss = 0
+
+            total_loss = 0.0
 
             for X, y in loader:
+
                 X = X.to(self.device)
                 y = y.to(self.device)
 
                 optimizer.zero_grad()
 
                 outputs = self.model(X)
+
                 loss = criterion(outputs, y)
 
                 loss.backward()
+
                 optimizer.step()
 
                 total_loss += loss.item()
@@ -125,29 +123,125 @@ class FLClient:
                 f"| Loss: {avg_loss:.4f}"
             )
 
-        # GET UPDATED WEIGHTS
         updated_weights = self.get_weights()
 
-        # COMPUTE ΔW (GRADIENT UPDATE)
-        delta_weights = self.compute_weight_update(
+        # Optional debug
+        delta = self.compute_weight_update(
             initial_weights,
             updated_weights
         )
 
-        # DEBUG / ANALYSIS 
         total_update_norm = sum(
-            torch.norm(v.float()).item() for v in delta_weights.values()
+            torch.norm(v.float()).item()
+            for v in delta.values()
         )
 
         print(
             f"[Client {self.client_id}] "
-            f"Update magnitude (Delta W norm): {total_update_norm:.4f}"
+            f"Update Norm: {total_update_norm:.4f}"
         )
 
-        # RETURN UPDATED WEIGHTS (FedAvg compatible)
         return updated_weights
 
-    # UTILITIES
+    # Local Evaluation
+    def local_evaluate(
+        self,
+        X_test,
+        y_test,
+        batch_size=64
+    ):
+        """
+        Evaluate local model on this client's test set
+
+        Returns:
+            {
+                client_id,
+                loss,
+                accuracy,
+                f1_score
+            }
+        """
+
+        # Prepare tensors
+        X_tensor = reshape_for_cnn(X_test)
+
+        y_tensor = torch.tensor(
+            y_test.values.squeeze() - 1,
+            dtype=torch.long
+        )
+
+        dataset = TensorDataset(
+            X_tensor,
+            y_tensor
+        )
+
+        loader = DataLoader(
+            dataset,
+            batch_size=batch_size,
+            shuffle=False
+        )
+
+        self.model.eval()
+
+        criterion = torch.nn.CrossEntropyLoss()
+
+        total_loss = 0.0
+
+        all_preds = []
+        all_labels = []
+
+        with torch.no_grad():
+
+            for X, y in loader:
+
+                X = X.to(self.device)
+                y = y.to(self.device)
+
+                outputs = self.model(X)
+
+                loss = criterion(outputs, y)
+
+                total_loss += loss.item()
+
+                _, preds = torch.max(outputs, 1)
+
+                all_preds.extend(
+                    preds.cpu().numpy()
+                )
+
+                all_labels.extend(
+                    y.cpu().numpy()
+                )
+
+        avg_loss = total_loss / len(loader)
+
+        acc = accuracy_score(
+            all_labels,
+            all_preds
+        )
+
+        f1 = f1_score(
+            all_labels,
+            all_preds,
+            average="weighted"
+        )
+
+        print(
+            f"[Client {self.client_id}] "
+            f"Local Eval -> "
+            f"Loss: {avg_loss:.4f} | "
+            f"Acc: {acc:.4f} | "
+            f"F1: {f1:.4f}"
+        )
+
+        return {
+            "client_id": self.client_id,
+            "loss": avg_loss,
+            "accuracy": acc,
+            "f1_score": f1
+        }
+
+    # Utilities
     def get_model(self):
         return self.model
 
@@ -158,5 +252,13 @@ class FLClient:
         self.model = model.to(self.device)
 
     def print_status(self):
-        total_params = sum(p.numel() for p in self.model.parameters())
-        print(f"[Client {self.client_id}] Model loaded with {total_params} parameters")
+        total_params = sum(
+            p.numel()
+            for p in self.model.parameters()
+        )
+
+        print(
+            f"[Client {self.client_id}] "
+            f"Model loaded with "
+            f"{total_params} parameters"
+        )
