@@ -2,7 +2,7 @@
 
 import copy
 import torch
-
+from src.packet_analysis import PacketAnalyzer
 
 class FederatedServer:
     def __init__(self, model=None):
@@ -17,9 +17,13 @@ class FederatedServer:
         self.client_updates = []
         self.total_samples = 0
         self.global_model = model
+        self.packet_analyzer = PacketAnalyzer()
+        self.current_round = 0
 
     # Inspect Communication Payload + Validate Content
     def collect_updates(self, client_updates: list):
+        
+        self.current_round += 1
 
         print("\n[SERVER] ===== Collecting Client Updates =====")
 
@@ -74,6 +78,11 @@ class FederatedServer:
                 )
 
             client_id = update["client_id"]
+            self.packet_analyzer.log_packet(
+                round_num=self.current_round,
+                client_id=client_id,
+                payload=update
+            )
             weights = update["weights"]
             num_samples = update["num_samples"]
 

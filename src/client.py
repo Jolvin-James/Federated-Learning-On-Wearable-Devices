@@ -261,4 +261,4 @@ class FLClient:
             f"[Client {self.client_id}] "
             f"Model loaded with "
             f"{total_params} parameters"
-        )
+        )
