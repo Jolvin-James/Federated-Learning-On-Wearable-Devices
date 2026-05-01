@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy-Preserving HAR Review Dashboard</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5c6875;
+      --line: #d8e0e8;
+      --panel: #ffffff;
+      --wash: #f4f7fa;
+      --good: #15845b;
+      --warn: #b45309;
+      --bad: #b42318;
+      --blue: #255c99;
+      --teal: #087f8c;
+      --slate: #2f3e4d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(37, 92, 153, 0.08), transparent 34%),
+        linear-gradient(315deg, rgba(8, 127, 140, 0.10), transparent 38%),
+        var(--wash);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.45;
+    }
+
+    header {
+      padding: 40px 6vw 26px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.76);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 1100px;
+      font-size: clamp(30px, 4vw, 54px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    header p {
+      max-width: 960px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    main {
+      padding: 28px 6vw 56px;
+    }
+
+    section {
+      margin: 0 auto 28px;
+      max-width: 1260px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 14px 28px rgba(30, 45, 60, 0.07);
+    }
+
+    .span-3 {
+      grid-column: span 3;
+    }
+
+    .span-4 {
+      grid-column: span 4;
+    }
+
+    .span-5 {
+      grid-column: span 5;
+    }
+
+    .span-6 {
+      grid-column: span 6;
+    }
+
+    .span-7 {
+      grid-column: span 7;
+    }
+
+    .span-12 {
+      grid-column: span 12;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .metric-value {
+      margin-top: 8px;
+      font-size: 34px;
+      font-weight: 800;
+    }
+
+    .metric-note {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      background: #eef3f8;
+      color: #24313f;
+      font-weight: 700;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .tag.good {
+      color: #075c3d;
+      background: #dff5ea;
+    }
+
+    .tag.bad {
+      color: #8d1b12;
+      background: #ffe4df;
+    }
+
+    .tag.warn {
+      color: #7a3d00;
+      background: #fff0d1;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: 1fr 72px 1fr;
+      align-items: stretch;
+      gap: 14px;
+    }
+
+    .node {
+      min-height: 122px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fbfdff;
+    }
+
+    .node h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .node p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      font-size: 42px;
+      font-weight: 800;
+    }
+
+    .payload {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #101820;
+      color: #d7f8ff;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 14px;
+      overflow-x: auto;
+      min-height: 132px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 64px;
+      gap: 10px;
+      align-items: center;
+      margin: 14px 0;
+    }
+
+    .bar-track {
+      height: 16px;
+      border-radius: 999px;
+      background: #e3ebf2;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--blue), var(--teal));
+    }
+
+    .images {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figure img {
+      width: 100%;
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .step {
+      border-left: 4px solid var(--teal);
+      background: #f9fcfd;
+      padding: 12px;
+      border-radius: 6px;
+      min-height: 112px;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .step span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .proof-stage {
+      display: grid;
+      grid-template-columns: 1fr 220px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .device-box {
+      border: 2px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 18px;
+      min-height: 260px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .device-box.client {
+      border-color: rgba(8, 127, 140, 0.35);
+    }
+
+    .device-box.server {
+      border-color: rgba(37, 92, 153, 0.35);
+    }
+
+    .device-title {
+      font-weight: 800;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .data-chip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+      padding: 9px 10px;
+      border-radius: 6px;
+      background: #f1f6fa;
+      border: 1px solid #d9e5ee;
+      font-size: 14px;
+    }
+
+    .data-chip.private {
+      background: #fff1ee;
+      border-color: #ffd1c8;
+    }
+
+    .data-chip.safe {
+      background: #e7f8ee;
+      border-color: #bfe8d0;
+    }
+
+    .shield {
+      min-height: 260px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff, #edf7f8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+      position: relative;
+    }
+
+    .shield-mark {
+      width: 92px;
+      height: 108px;
+      background: linear-gradient(180deg, var(--teal), #0d5d68);
+      clip-path: polygon(50% 0, 88% 15%, 82% 72%, 50% 100%, 18% 72%, 12% 15%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 44px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      box-shadow: 0 16px 26px rgba(8, 127, 140, 0.24);
+    }
+
+    .proof-line {
+      height: 6px;
+      border-radius: 999px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--teal) 0 16px,
+        transparent 16px 28px
+      );
+      margin: 14px 0;
+    }
+
+    .verdict {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 14px;
+      align-items: center;
+      padding: 18px;
+      border-radius: 8px;
+      background: #e7f8ee;
+      border: 2px solid #9ed9b8;
+    }
+
+    .verdict-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--good);
+      font-size: 40px;
+      font-weight: 900;
+    }
+
+    .verdict h3 {
+      margin: 0 0 4px;
+      font-size: 26px;
+      color: #075c3d;
+    }
+
+    .verdict p {
+      margin: 0;
+      color: #1f5f46;
+    }
+
+    .blocked-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .blocked-item {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ffd1c8;
+      background: #fff7f5;
+      color: #8d1b12;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .span-3,
+      .span-4,
+      .span-5,
+      .span-6,
+      .span-7,
+      .span-12 {
+        grid-column: span 12;
+      }
+
+      .flow,
+      .images,
+      .steps,
+      .proof-stage,
+      .blocked-list {
+        grid-template-columns: 1fr;
+      }
+
+      .arrow {
+        min-height: 38px;
+        transform: rotate(90deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Privacy-Preserving Human Activity Recognition</h1>
+    <p>
+      This dashboard turns the experiment results into a review-ready story:
+      centralized learning is slightly more accurate, while federated learning
+      keeps raw wearable sensor data local and sends only model updates.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Privacy Verification Visual</h2>
+      <div class="card">
+        <div class="proof-stage">
+          <div class="device-box client">
+            <div class="device-title">Client Device</div>
+            <div class="data-chip private"><span>Raw accelerometer windows</span><strong>Kept local</strong></div>
+            <div class="data-chip private"><span>Raw gyroscope windows</span><strong>Kept local</strong></div>
+            <div class="data-chip private"><span>Activity labels</span><strong>Kept local</strong></div>
+            <div class="proof-line"></div>
+            <div class="data-chip safe"><span>Model weights</span><strong>Sent</strong></div>
+            <div class="data-chip safe"><span>Sample count</span><strong>Sent</strong></div>
+          </div>
+
+          <div class="shield">
+            <div class="shield-mark">OK</div>
+            <strong>Privacy Gate Passed</strong>
+            <p class="small">Packet analyzer found zero raw-data fields in federated communication.</p>
+          </div>
+
+          <div class="device-box server">
+            <div class="device-title">Federated Server</div>
+            <div class="data-chip safe"><span>client_id</span><strong>Visible</strong></div>
+            <div class="data-chip safe"><span>weights</span><strong>Visible</strong></div>
+            <div class="data-chip safe"><span>num_samples</span><strong>Visible</strong></div>
+            <div class="proof-line"></div>
+            <div class="data-chip private"><span>sensor values</span><strong>Not visible</strong></div>
+            <div class="data-chip private"><span>activity labels</span><strong>Not visible</strong></div>
+          </div>
+        </div>
+
+        <div style="height: 16px"></div>
+
+        <div class="verdict">
+          <div class="verdict-icon">OK</div>
+          <div>
+            <h3>Privacy Preserved Successfully</h3>
+            <p>For 180 logged federated packets, the only transmitted keys were <code>client_id</code>, <code>weights</code>, and <code>num_samples</code>. Raw wearable sensor data and labels were not transmitted to the server.</p>
+          </div>
+        </div>
+
+        <div class="blocked-list">
+          <div class="blocked-item">raw_sensor_data: blocked</div>
+          <div class="blocked-item">activity_labels: blocked</div>
+          <div class="blocked-item">gyro/accelerometer: blocked</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Centralized vs Federated Payload Demo</h2>
+      <div class="grid">
+        <div class="card span-6">
+          <h3>Centralized Demo: Raw Data Exposed</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>TCP Port</th>
+                <td><code>5001</code></td>
+              </tr>
+              <tr>
+                <th>Payload Keys</th>
+                <td><code>client_id, raw_sensor_data, activity_labels, subject_ids, description</code></td>
+              </tr>
+              <tr>
+                <th>Privacy Risk</th>
+                <td><span class="tag bad">True</span></td>
+              </tr>
+              <tr>
+                <th>Risky Fields</th>
+                <td><code>raw_sensor_data, activity_labels, subject_ids</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card span-6">
+          <h3>Federated Demo: Model Update Only</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>TCP Port</th>
+                <td><code>5000</code></td>
+              </tr>
+              <tr>
+                <th>Payload Keys</th>
+                <td><code>client_id, weights, num_samples, description</code></td>
+              </tr>
+              <tr>
+                <th>Privacy Risk</th>
+                <td><span class="tag good">False</span></td>
+              </tr>
+              <tr>
+                <th>Risky Fields</th>
+                <td><code>none</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card span-12">
+          <div class="images">
+            <figure>
+              <img src="results/privacy_payload_comparison.png" alt="Centralized raw-data payload versus federated model-update payload">
+              <figcaption>Generated by <code>privacy_comparison_demo.py</code>: centralized sends raw HAR fields; FL sends model-update fields.</figcaption>
+            </figure>
+            <figure>
+              <img src="results/privacy_raw_vs_weights.png" alt="Raw sensor values compared with CNN weights">
+              <figcaption>Raw sensor values are directly interpretable movement signals; model weights are parameter tensors, not raw readings.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid">
+        <div class="card span-3">
+          <div class="metric-label">Centralized Accuracy</div>
+          <div class="metric-value">92.70%</div>
+          <div class="metric-note">Trained after combining client data.</div>
+        </div>
+        <div class="card span-3">
+          <div class="metric-label">Federated Accuracy</div>
+          <div class="metric-value">91.08%</div>
+          <div class="metric-note">Trained using model updates only.</div>
+        </div>
+        <div class="card span-3">
+          <div class="metric-label">Accuracy Gap</div>
+          <div class="metric-value">1.62%</div>
+          <div class="metric-note">Near-centralized performance.</div>
+        </div>
+        <div class="card span-3">
+          <div class="metric-label">Privacy Risk Fields</div>
+          <div class="metric-value">0</div>
+          <div class="metric-note">Across 180 FL packets.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What The Server Sees</h2>
+      <div class="grid">
+        <div class="card span-6">
+          <h3>Centralized Learning Risk Model</h3>
+          <div class="flow">
+            <div class="node">
+              <h3>Client Device</h3>
+              <p>Owns accelerometer, gyroscope and activity label data.</p>
+            </div>
+            <div class="arrow">-></div>
+            <div class="node">
+              <h3>Central Server</h3>
+              <p>Receives raw sensor windows and labels before training.</p>
+            </div>
+          </div>
+          <pre class="payload">{
+  "client_id": 1,
+  "raw_sensor_data": [[... 9 channels x 128 values ...]],
+  "activity_labels": ["WALKING", "SITTING", "..."]
+}</pre>
+          <span class="tag bad">Raw data exposed</span>
+        </div>
+
+        <div class="card span-6">
+          <h3>Implemented Federated Learning</h3>
+          <div class="flow">
+            <div class="node">
+              <h3>Client Device</h3>
+              <p>Trains the CNN locally using private sensor windows.</p>
+            </div>
+            <div class="arrow">-></div>
+            <div class="node">
+              <h3>Federated Server</h3>
+              <p>Receives model parameters and aggregates them with FedAvg.</p>
+            </div>
+          </div>
+          <pre class="payload">{
+  "client_id": 7,
+  "weights": "HAR_CNN state_dict tensors",
+  "num_samples": 246
+}</pre>
+          <span class="tag good">Raw data stays local</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Performance vs Privacy</h2>
+      <div class="grid">
+        <div class="card span-7">
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Accuracy</th>
+                <th>F1 Score</th>
+                <th>Loss</th>
+                <th>Training Time</th>
+                <th>Privacy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Centralized</td>
+                <td>0.9270</td>
+                <td>0.9266</td>
+                <td>0.2651</td>
+                <td>25.48 sec</td>
+                <td><span class="tag bad">Low</span></td>
+              </tr>
+              <tr>
+                <td>Federated</td>
+                <td>0.9108</td>
+                <td>0.9107</td>
+                <td>0.6165</td>
+                <td>37.70 sec</td>
+                <td><span class="tag good">High</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="small">
+            Interpretation: federated learning loses only 1.62 percentage points
+            of accuracy while avoiding raw sensor-data transfer to the server.
+          </p>
+        </div>
+        <div class="card span-5">
+          <div class="bar-row">
+            <div>Centralized</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 92.7%"></div></div>
+            <div>92.70%</div>
+          </div>
+          <div class="bar-row">
+            <div>Federated</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 91.08%"></div></div>
+            <div>91.08%</div>
+          </div>
+          <div class="bar-row">
+            <div>Gap</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 16.2%"></div></div>
+            <div>1.62%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Packet-Level Privacy Evidence</h2>
+      <div class="grid">
+        <div class="card span-4">
+          <div class="metric-label">FL Rounds</div>
+          <div class="metric-value">15</div>
+          <div class="metric-note">Repeated client-server communication.</div>
+        </div>
+        <div class="card span-4">
+          <div class="metric-label">Logged Packets</div>
+          <div class="metric-value">180</div>
+          <div class="metric-note">12 participating clients per round.</div>
+        </div>
+        <div class="card span-4">
+          <div class="metric-label">Average Payload</div>
+          <div class="metric-value">1035 KB</div>
+          <div class="metric-note">Serialized model update payload.</div>
+        </div>
+        <div class="card span-12">
+          <table>
+            <thead>
+              <tr>
+                <th>Evidence</th>
+                <th>Observed Value</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Payload keys</td>
+                <td><code>client_id, weights, num_samples</code></td>
+                <td>The server receives model updates, not raw sensor windows.</td>
+              </tr>
+              <tr>
+                <td>Privacy risk</td>
+                <td><span class="tag good">False for every packet</span></td>
+                <td>No blocked fields such as labels, activity, gyro, accelerometer or dataset were found.</td>
+              </tr>
+              <tr>
+                <td>Wireshark filter</td>
+                <td><code>tcp.port == 5000</code></td>
+                <td>Shows FL communication between local client ports and the server port.</td>
+              </tr>
+              <tr>
+                <td>Raw-data privacy claim</td>
+                <td><span class="tag warn">Communication-level privacy</span></td>
+                <td>The system prevents raw data transmission; it does not claim cryptographic privacy.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Generated Result Graphs</h2>
+      <div class="images">
+        <figure>
+          <img src="results/comparison_scores.png" alt="Centralized and federated score comparison">
+          <figcaption>Accuracy, F1 and loss-derived score comparison.</figcaption>
+        </figure>
+        <figure>
+          <img src="results/federated_confusion_matrix.png" alt="Federated confusion matrix">
+          <figcaption>Federated model class-level performance.</figcaption>
+        </figure>
+        <figure>
+          <img src="results/comparison_time.png" alt="Training time comparison">
+          <figcaption>Centralized training is faster, FL adds communication and local rounds.</figcaption>
+        </figure>
+        <figure>
+          <img src="results/comparison_privacy.png" alt="Privacy comparison">
+          <figcaption>Privacy score based on raw-data exposure risk.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Live Review Script</h2>
+      <div class="steps">
+        <div class="step">
+          <strong>1. Show the risk</strong>
+          <span>Centralized learning requires data collection at the server, so raw sensor windows are exposed.</span>
+        </div>
+        <div class="step">
+          <strong>2. Show the FL payload</strong>
+          <span>Point to the runtime payload: <code>client_id</code>, <code>weights</code>, <code>num_samples</code>.</span>
+        </div>
+        <div class="step">
+          <strong>3. Show Wireshark</strong>
+          <span>Filter with <code>tcp.port == 5000</code> to show model-update traffic during FL rounds.</span>
+        </div>
+        <div class="step">
+          <strong>4. Show the tradeoff</strong>
+          <span>Federated accuracy is 91.08%, only 1.62% lower than centralized accuracy.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

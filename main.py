@@ -30,10 +30,12 @@ from src.model_utils import reshape_for_cnn
 from src.client import FLClient
 from src.server import FederatedServer
 from src.comparison import ModelComparator
+from privacy_comparison_demo import run_demo as run_privacy_comparison_demo
 
 HOST = "127.0.0.1"
 PORT = 5000
 BUFFER = 4096
+FL_PACKET_DEMO_DELAY_SEC = 0.15
 
 def recvall(conn, n):
     data = b""
@@ -376,37 +378,42 @@ def run_federated_training(
 
         received_updates = []
 
-        for cid in selected:
-
-            client = clients[cid]
-            data = client_splits[cid]
-
-            updated_weights = client.local_train(
-                data["X_train"],
-                data["y_train"],
-                epochs=3,
-                batch_size=32,
-                lr=0.001
-            )
-
-            payload = {
-                "client_id": cid,
-                "weights": updated_weights,
-                "num_samples": len(data["X_train"])
-            }
-
-            send_payload(payload)
-
         try:
-            for _ in range(len(selected)):
-                conn, _ = sock.accept()
+            for cid in selected:
 
+                client = clients[cid]
+                data = client_splits[cid]
+
+                updated_weights = client.local_train(
+                    data["X_train"],
+                    data["y_train"],
+                    epochs=3,
+                    batch_size=32,
+                    lr=0.001
+                )
+
+                payload = {
+                    "client_id": cid,
+                    "weights": updated_weights,
+                    "num_samples": len(data["X_train"])
+                }
+
+                send_payload(payload)
+                print(
+                    f"[SOCKET] Client {cid} sent model update "
+                    f"to {HOST}:{PORT}"
+                )
+
+                conn, _ = sock.accept()
                 packet = receive_payload(conn)
 
                 if packet is not None:
                     received_updates.append(packet)
 
                 conn.close()
+
+                # Keeps packets visible enough for a live Wireshark demo.
+                time.sleep(FL_PACKET_DEMO_DELAY_SEC)
 
         finally:
             sock.close()
@@ -645,15 +652,28 @@ def main():
     parser.add_argument(
         "--mode",
         type=str,
-        default="both",
+        default="full_demo",
         choices=[
             "centralized",
             "federated",
-            "both"
+            "both",
+            "privacy_demo",
+            "full_demo"
         ]
     )
 
     args = parser.parse_args()
+
+    if args.mode in ["privacy_demo", "full_demo"]:
+        run_privacy_comparison_demo()
+        if args.mode == "privacy_demo":
+            return
+
+        print(
+            "\n========== STARTING MAIN TRAINING PIPELINE =========="
+        )
+
+        args.mode = "both"
 
     device = torch.device(
         "cuda" if torch.cuda.is_available()
@@ -662,7 +682,7 @@ def main():
 
     print("Using Device:", device)
 
-    loader = UCIHARDataLoader("data/UCI_HAR")
+    loader = UCIHARDataLoader("data")
 
     train_df, test_df = loader.load_full_dataset(
         use_inertial_signals=True

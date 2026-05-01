@@ -1,0 +1,39 @@
+[
+  {
+    "scenario": "Centralized Raw Data",
+    "port": 5001,
+    "encoding": "json",
+    "payload_keys": [
+      "client_id",
+      "raw_sensor_data",
+      "activity_labels",
+      "subject_ids",
+      "description"
+    ],
+    "bytes_sent": 107269,
+    "payload_size_kb": 104.75,
+    "privacy_risk": true,
+    "risky_keys": [
+      "raw_sensor_data",
+      "activity_labels",
+      "subject_ids"
+    ],
+    "server_interpretation": "Server receives raw wearable data"
+  },
+  {
+    "scenario": "Federated Model Update",
+    "port": 5000,
+    "encoding": "pickle",
+    "payload_keys": [
+      "client_id",
+      "weights",
+      "num_samples",
+      "description"
+    ],
+    "bytes_sent": 1059914,
+    "payload_size_kb": 1035.07,
+    "privacy_risk": false,
+    "risky_keys": [],
+    "server_interpretation": "Server receives model update only"
+  }
+]

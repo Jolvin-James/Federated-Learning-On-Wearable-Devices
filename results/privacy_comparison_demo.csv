@@ -1,0 +1,3 @@
+scenario,port,encoding,payload_keys,bytes_sent,payload_size_kb,privacy_risk,risky_keys,server_interpretation
+Centralized Raw Data,5001,json,"['client_id', 'raw_sensor_data', 'activity_labels', 'subject_ids', 'description']",107269,104.75,True,"['raw_sensor_data', 'activity_labels', 'subject_ids']",Server receives raw wearable data
+Federated Model Update,5000,pickle,"['client_id', 'weights', 'num_samples', 'description']",1059914,1035.07,False,[],Server receives model update only

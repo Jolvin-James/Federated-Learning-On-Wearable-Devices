@@ -1,0 +1,3 @@
+Model,Accuracy,F1 Score,Loss,Training Time (sec),Rounds,Privacy
+Centralized,0.9328,0.9326,0.2382,9.45,0,Low
+Federated,0.9077,0.9073,1.123,61.62,15,High

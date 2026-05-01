@@ -1,0 +1,32 @@
+{
+  "centralized_raw_data": {
+    "keys": [
+      "client_id",
+      "raw_sensor_data",
+      "activity_labels",
+      "subject_ids",
+      "description"
+    ],
+    "value_types": {
+      "client_id": "int",
+      "raw_sensor_data": "list",
+      "activity_labels": "list",
+      "subject_ids": "list",
+      "description": "str"
+    }
+  },
+  "federated_model_update": {
+    "keys": [
+      "client_id",
+      "weights",
+      "num_samples",
+      "description"
+    ],
+    "value_types": {
+      "client_id": "int",
+      "weights": "OrderedDict",
+      "num_samples": "int",
+      "description": "str"
+    }
+  }
+}
