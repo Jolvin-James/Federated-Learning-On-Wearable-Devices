@@ -7,10 +7,16 @@ import pickle
 import random
 import socket
 import struct
+import sys
 import time
 
 import torch
+import numpy as np
 import pandas as pd
+import seaborn as sns
+import matplotlib
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 from sklearn.metrics import (
@@ -31,9 +37,25 @@ from src.client import FLClient
 from src.server import FederatedServer
 from src.comparison import ModelComparator
 
+def set_seed(seed=42):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
 HOST = "127.0.0.1"
 PORT = 5000
 BUFFER = 4096
+
+ACTIVITY_LABELS = [
+    "Walking",
+    "Upstairs",
+    "Downstairs",
+    "Sitting",
+    "Standing",
+    "Laying"
+]
 
 def recvall(conn, n):
     data = b""
@@ -69,8 +91,30 @@ def receive_payload(conn):
 
     return pickle.loads(body)
 
+class Logger(object):
+    def __init__(self, filename="results/terminal_logs.txt"):
+        self.terminal = sys.stdout
+        self.log = open(filename, "w", encoding="utf-8")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)
+        self.log.flush()
+
+    def flush(self):
+        # needed for python 3 compatibility.
+        self.terminal.flush()
+        self.log.flush()
+
+    def isatty(self):
+        return self.terminal.isatty()
+
 def plot_training_curves(history, model_name):
     os.makedirs("results", exist_ok=True)
+
+    history_path = f"results/{model_name.lower()}_history.csv"
+    pd.DataFrame(history).to_csv(history_path, index_label="step")
+    print("Saved:", history_path)
 
     if "loss" in history:
         plt.figure(figsize=(8, 5))
@@ -81,7 +125,7 @@ def plot_training_curves(history, model_name):
         plt.grid(True)
         plt.tight_layout()
         plt.savefig(f"results/{model_name.lower()}_loss.png")
-        plt.show()
+        plt.close()
 
     plt.figure(figsize=(8, 5))
     plt.plot(history["accuracy"], marker="o")
@@ -91,7 +135,7 @@ def plot_training_curves(history, model_name):
     plt.grid(True)
     plt.tight_layout()
     plt.savefig(f"results/{model_name.lower()}_accuracy.png")
-    plt.show()
+    plt.close()
 
     plt.figure(figsize=(8, 5))
     plt.plot(history["f1"], marker="o")
@@ -101,7 +145,7 @@ def plot_training_curves(history, model_name):
     plt.grid(True)
     plt.tight_layout()
     plt.savefig(f"results/{model_name.lower()}_f1.png")
-    plt.show()
+    plt.close()
 
 def compute_norm_stats(client_splits):
     all_train = [client_splits[cid]["X_train"] for cid in client_splits]
@@ -194,7 +238,14 @@ def quick_global_test(model, partitioner, mean, std, device):
 
 
 # CENTRALIZED TRAINING
-def run_centralized_training(client_splits, partitioner, device):
+def run_centralized_training(
+    client_splits,
+    partitioner,
+    device,
+    epochs=10,
+    lr=0.001,
+    weight_decay=1e-4
+):
     print("\n========== CENTRALIZED TRAINING ==========")
 
     start_time = time.time()
@@ -243,7 +294,8 @@ def run_centralized_training(client_splits, partitioner, device):
 
     optimizer = torch.optim.Adam(
         model.parameters(),
-        lr=0.001
+        lr=lr,
+        weight_decay=weight_decay
     )
 
     criterion = torch.nn.CrossEntropyLoss()
@@ -256,7 +308,7 @@ def run_centralized_training(client_splits, partitioner, device):
 
     best_acc = 0.0
 
-    for epoch in range(10):
+    for epoch in range(epochs):
 
         loss = train(
             model,
@@ -277,7 +329,7 @@ def run_centralized_training(client_splits, partitioner, device):
         history["f1"].append(f1)
 
         print(
-            f"Epoch {epoch+1}/10 | "
+            f"Epoch {epoch+1}/{epochs} | "
             f"Loss={loss:.4f} | "
             f"Acc={acc:.4f} | "
             f"F1={f1:.4f}"
@@ -292,7 +344,7 @@ def run_centralized_training(client_splits, partitioner, device):
             )
 
     model.load_state_dict(
-        torch.load("results/centralized_best.pth")
+        torch.load("results/centralized_best.pth", map_location=device)
     )
 
     plot_training_curves(history, "Centralized")
@@ -312,12 +364,29 @@ def run_federated_training(
     client_splits,
     partitioner,
     device,
-    rounds=15
+    rounds=15,
+    client_fraction=0.8,
+    local_epochs=2,
+    batch_size=32,
+    lr=0.001,
+    weight_decay=1e-4,
+    max_grad_norm=5.0
 ):
     print("\n========== FEDERATED TRAINING ==========")
     print("Wireshark Filter -> tcp.port == 5000")
 
     start_time = time.time()
+
+    if not 0 < client_fraction <= 1:
+        raise ValueError("--client-fraction must be greater than 0 and at most 1")
+
+    client_splits = {
+        cid: {
+            key: value.copy() if hasattr(value, "copy") else value
+            for key, value in split.items()
+        }
+        for cid, split in client_splits.items()
+    }
 
     global_model = HAR_CNN().to(device)
     server = FederatedServer(model=global_model)
@@ -355,9 +424,15 @@ def run_federated_training(
 
         print(f"\n========== ROUND {round_num} ==========")
 
+        selected_count = max(
+            2,
+            int(round(len(clients) * client_fraction))
+        )
+        selected_count = min(len(clients), selected_count)
+
         selected = random.sample(
             list(clients.keys()),
-            max(2, int(len(clients) * 0.6))
+            selected_count
         )
 
         sock = socket.socket(
@@ -384,9 +459,11 @@ def run_federated_training(
             updated_weights = client.local_train(
                 data["X_train"],
                 data["y_train"],
-                epochs=3,
-                batch_size=32,
-                lr=0.001
+                epochs=local_epochs,
+                batch_size=batch_size,
+                lr=lr,
+                weight_decay=weight_decay,
+                max_grad_norm=max_grad_norm
             )
 
             payload = {
@@ -449,7 +526,7 @@ def run_federated_training(
         server.clear_updates()
 
     global_model.load_state_dict(
-        torch.load("results/federated_best.pth")
+        torch.load("results/federated_best.pth", map_location=device)
     )
 
     plot_training_curves(history, "Federated")
@@ -499,27 +576,10 @@ def run_global_evaluation(
 ):
     print(f"\n========== {model_name} TEST ==========")
 
-    import os
-    import numpy as np
-    import seaborn as sns
-    import matplotlib.pyplot as plt
-
-    from sklearn.metrics import (
-        confusion_matrix,
-        classification_report
-    )
-
     os.makedirs("results", exist_ok=True)
 
     # HAR Activity Labels
-    class_names = [
-        "Walking",
-        "Upstairs",
-        "Downstairs",
-        "Sitting",
-        "Standing",
-        "Laying"
-    ]
+    class_names = ACTIVITY_LABELS
 
     # Load Global Test Set
     X_test_raw, y_test_raw = partitioner.get_global_test()
@@ -556,15 +616,29 @@ def run_global_evaluation(
     print("\nConfusion Matrix:")
     print(cm)
 
+    report = classification_report(
+        labels,
+        preds,
+        target_names=class_names,
+        digits=4,
+        zero_division=0,
+        output_dict=True
+    )
+
     print("\nClassification Report:")
     print(
         classification_report(
             labels,
             preds,
             target_names=class_names,
-            digits=4
+            digits=4,
+            zero_division=0
         )
     )
+
+    report_path = f"results/{model_name.lower()}_classification_report.csv"
+    pd.DataFrame(report).transpose().to_csv(report_path)
+    print("Saved:", report_path)
 
     plt.figure(figsize=(10, 8))
 
@@ -596,12 +670,47 @@ def run_global_evaluation(
     )
 
     plt.savefig(save_path, dpi=300)
-    plt.show()
+    plt.close()
 
     print("Saved:", save_path)
 
+    cm_csv_path = f"results/{model_name.lower()}_confusion_matrix.csv"
+    pd.DataFrame(
+        cm,
+        index=class_names,
+        columns=class_names
+    ).to_csv(cm_csv_path)
+    print("Saved:", cm_csv_path)
+
+    mistake_counts = cm.copy()
+    np.fill_diagonal(mistake_counts, 0)
+    mistake_rows = []
+
+    for true_idx, pred_idx in np.argwhere(mistake_counts > 0):
+        mistake_rows.append({
+            "true_label": class_names[true_idx],
+            "predicted_label": class_names[pred_idx],
+            "count": int(mistake_counts[true_idx, pred_idx])
+        })
+
+    mistake_rows = sorted(
+        mistake_rows,
+        key=lambda row: row["count"],
+        reverse=True
+    )
+
+    mistakes_path = f"results/{model_name.lower()}_top_confusions.csv"
+    pd.DataFrame(mistake_rows).to_csv(mistakes_path, index=False)
+    print("Saved:", mistakes_path)
+
     # NORMALIZED CONFUSION MATRIX (%)
-    cm_percent = cm.astype("float") / cm.sum(axis=1)[:, np.newaxis]
+    row_sums = cm.sum(axis=1)[:, np.newaxis]
+    cm_percent = np.divide(
+        cm.astype("float"),
+        row_sums,
+        out=np.zeros_like(cm, dtype=float),
+        where=row_sums != 0
+    )
 
     plt.figure(figsize=(10, 8))
 
@@ -633,13 +742,20 @@ def run_global_evaluation(
     )
 
     plt.savefig(save_path2, dpi=300)
-    plt.show()
+    plt.close()
 
     print("Saved:", save_path2)
 
     return loss, acc, f1
 
 def main():
+    set_seed(42)
+
+    # INITIALIZE LOGGER
+    os.makedirs("results", exist_ok=True)
+    sys.stdout = Logger("results/terminal_logs.txt")
+    sys.stderr = sys.stdout
+
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
@@ -651,6 +767,62 @@ def main():
             "federated",
             "both"
         ]
+    )
+
+    parser.add_argument(
+        "--central-epochs",
+        type=int,
+        default=10,
+        help="Number of centralized training epochs."
+    )
+
+    parser.add_argument(
+        "--rounds",
+        type=int,
+        default=15,
+        help="Number of federated communication rounds."
+    )
+
+    parser.add_argument(
+        "--client-fraction",
+        type=float,
+        default=0.8,
+        help="Fraction of FL clients sampled per round."
+    )
+
+    parser.add_argument(
+        "--local-epochs",
+        type=int,
+        default=2,
+        help="Local epochs per selected FL client."
+    )
+
+    parser.add_argument(
+        "--lr",
+        type=float,
+        default=0.001,
+        help="Learning rate for centralized and federated training."
+    )
+
+    parser.add_argument(
+        "--weight-decay",
+        type=float,
+        default=1e-4,
+        help="Adam weight decay to reduce local overfitting."
+    )
+
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=32,
+        help="Federated local training batch size."
+    )
+
+    parser.add_argument(
+        "--max-grad-norm",
+        type=float,
+        default=5.0,
+        help="Gradient clipping norm for federated local training."
     )
 
     args = parser.parse_args()
@@ -693,7 +865,10 @@ def main():
         ) = run_centralized_training(
             client_splits,
             partitioner,
-            device
+            device,
+            epochs=args.central_epochs,
+            lr=args.lr,
+            weight_decay=args.weight_decay
         )
 
         run_global_evaluation(
@@ -730,7 +905,14 @@ def main():
         ) = run_federated_training(
             client_splits,
             partitioner,
-            device
+            device,
+            rounds=args.rounds,
+            client_fraction=args.client_fraction,
+            local_epochs=args.local_epochs,
+            batch_size=args.batch_size,
+            lr=args.lr,
+            weight_decay=args.weight_decay,
+            max_grad_norm=args.max_grad_norm
         )
 
         run_global_evaluation(
@@ -748,7 +930,7 @@ def main():
             f1_score=f_f1,
             loss=f_loss,
             training_time=f_time,
-            communication_rounds=15,
+            communication_rounds=args.rounds,
             privacy="High"
         )
 

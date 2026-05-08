@@ -22,9 +22,6 @@ class ModelComparator:
         self.save_dir = save_dir
         os.makedirs(self.save_dir, exist_ok=True)
 
-    # ---------------------------------------------------
-    # Add Result
-    # ---------------------------------------------------
     def add_result(
         self,
         model_name,
@@ -58,9 +55,6 @@ class ModelComparator:
             "Privacy": privacy
         })
 
-    # ---------------------------------------------------
-    # Summary Table
-    # ---------------------------------------------------
     def summary(self):
         df = pd.DataFrame(self.results)
 
@@ -78,36 +72,27 @@ class ModelComparator:
 
         return df
 
-    # ---------------------------------------------------
     # Performance Metrics Graph
-    # ---------------------------------------------------
     def plot_scores(self):
         df = pd.DataFrame(self.results)
 
         x = np.arange(len(df))
-        width = 0.25
+        width = 0.35
 
         plt.figure(figsize=(10, 6))
 
         plt.bar(
-            x - width,
+            x - width / 2,
             df["Accuracy"],
             width,
             label="Accuracy"
         )
 
         plt.bar(
-            x,
+            x + width / 2,
             df["F1 Score"],
             width,
             label="F1 Score"
-        )
-
-        plt.bar(
-            x + width,
-            1 - df["Loss"],
-            width,
-            label="1 - Loss"
         )
 
         plt.xticks(
@@ -115,10 +100,12 @@ class ModelComparator:
             df["Model"]
         )
 
-        plt.ylim(0.70, 1.00)
+        lower = max(0.0, min(df["Accuracy"].min(), df["F1 Score"].min()) - 0.05)
+        upper = min(1.0, max(df["Accuracy"].max(), df["F1 Score"].max()) + 0.03)
+        plt.ylim(lower, upper)
 
         plt.title(
-            "Centralized vs Federated Performance"
+            "Centralized vs Federated Accuracy and F1"
         )
 
         plt.ylabel("Score")
@@ -134,13 +121,48 @@ class ModelComparator:
         )
 
         plt.savefig(path)
-        plt.show()
+        plt.close()
 
         print("Saved:", path)
 
-    # ---------------------------------------------------
+    # Loss Graph
+    def plot_loss(self):
+        df = pd.DataFrame(self.results)
+
+        plt.figure(figsize=(8, 5))
+
+        bars = plt.bar(
+            df["Model"],
+            df["Loss"]
+        )
+
+        plt.title("Evaluation Loss Comparison")
+        plt.ylabel("Cross-Entropy Loss (lower is better)")
+
+        for bar in bars:
+            height = bar.get_height()
+            plt.text(
+                bar.get_x() + bar.get_width() / 2,
+                height,
+                f"{height:.3f}",
+                ha="center",
+                va="bottom"
+            )
+
+        plt.grid(axis="y", alpha=0.3)
+        plt.tight_layout()
+
+        path = os.path.join(
+            self.save_dir,
+            "comparison_loss.png"
+        )
+
+        plt.savefig(path)
+        plt.close()
+
+        print("Saved:", path)
+
     # Training Time Graph
-    # ---------------------------------------------------
     def plot_time(self):
         df = pd.DataFrame(self.results)
 
@@ -164,13 +186,11 @@ class ModelComparator:
         )
 
         plt.savefig(path)
-        plt.show()
+        plt.close()
 
         print("Saved:", path)
 
-    # ---------------------------------------------------
     # Privacy Comparison Graph
-    # ---------------------------------------------------
     def plot_privacy(self):
         df = pd.DataFrame(self.results)
 
@@ -206,13 +226,11 @@ class ModelComparator:
         )
 
         plt.savefig(path)
-        plt.show()
+        plt.close()
 
         print("Saved:", path)
 
-    # ---------------------------------------------------
     # Communication Rounds Graph
-    # ---------------------------------------------------
     def plot_rounds(self):
         df = pd.DataFrame(self.results)
 
@@ -236,13 +254,11 @@ class ModelComparator:
         )
 
         plt.savefig(path)
-        plt.show()
+        plt.close()
 
         print("Saved:", path)
 
-    # ---------------------------------------------------
     # Final Verdict
-    # ---------------------------------------------------
     def verdict(self):
         df = pd.DataFrame(self.results)
 
@@ -299,12 +315,10 @@ class ModelComparator:
                 "Federated training is faster."
             )
 
-    # ---------------------------------------------------
-    # Run Everything
-    # ---------------------------------------------------
     def run_all(self):
         self.summary()
         self.plot_scores()
+        self.plot_loss()
         self.plot_time()
         self.plot_privacy()
         self.plot_rounds()

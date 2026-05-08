@@ -213,10 +213,16 @@ class FederatedServer:
         global_weights = {}
 
         for key, val in reference_weights.items():
-            global_weights[key] = torch.zeros_like(
-                val,
-                dtype=torch.float32
-            )
+            if torch.is_floating_point(val):
+                global_weights[key] = torch.zeros_like(
+                    val,
+                    dtype=torch.float32
+                )
+            else:
+                # BatchNorm counters are integer buffers, not learnable weights.
+                # Averaging them can make diagnostics look unstable without
+                # improving the model.
+                global_weights[key] = val.clone()
 
         for update in self.client_updates:
 
@@ -226,14 +232,16 @@ class FederatedServer:
             factor = num_samples / self.total_samples
 
             for key in global_weights:
-                global_weights[key] += (
-                    client_weights[key].float() * factor
-                )
+                if torch.is_floating_point(client_weights[key]):
+                    global_weights[key] += (
+                        client_weights[key].float() * factor
+                    )
 
         for key in global_weights:
-            global_weights[key] = global_weights[key].to(
-                reference_weights[key].dtype
-            )
+            if torch.is_floating_point(reference_weights[key]):
+                global_weights[key] = global_weights[key].to(
+                    reference_weights[key].dtype
+                )
 
         print("[SERVER] Aggregation Complete")
 
@@ -313,6 +321,9 @@ class FederatedServer:
         total = 0.0
 
         for _, tensor in weights.items():
+            if not torch.is_floating_point(tensor):
+                continue
+
             total += torch.norm(
                 tensor.float()
             ).item()

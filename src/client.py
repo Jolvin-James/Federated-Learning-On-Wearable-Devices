@@ -54,7 +54,9 @@ class FLClient:
         y_train,
         epochs=2,
         batch_size=32,
-        lr=0.001
+        lr=0.001,
+        weight_decay=1e-4,
+        max_grad_norm=5.0
     ):
         """
         Local training on client data
@@ -89,7 +91,8 @@ class FLClient:
 
         optimizer = torch.optim.Adam(
             self.model.parameters(),
-            lr=lr
+            lr=lr,
+            weight_decay=weight_decay
         )
 
         self.model.train()
@@ -110,6 +113,12 @@ class FLClient:
                 loss = criterion(outputs, y)
 
                 loss.backward()
+
+                if max_grad_norm is not None:
+                    torch.nn.utils.clip_grad_norm_(
+                        self.model.parameters(),
+                        max_grad_norm
+                    )
 
                 optimizer.step()
 
@@ -134,6 +143,7 @@ class FLClient:
         total_update_norm = sum(
             torch.norm(v.float()).item()
             for v in delta.values()
+            if torch.is_floating_point(v)
         )
 
         print(
@@ -141,7 +151,7 @@ class FLClient:
             f"Update Norm: {total_update_norm:.4f}"
         )
 
-        return updated_weights
+        return copy.deepcopy(updated_weights)
 
     # Local Evaluation
     def local_evaluate(
@@ -261,4 +271,4 @@ class FLClient:
             f"[Client {self.client_id}] "
             f"Model loaded with "
             f"{total_params} parameters"
-        )
+        )
