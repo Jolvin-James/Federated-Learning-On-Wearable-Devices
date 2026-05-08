@@ -1,0 +1,21 @@
+{
+  "client_id": 30,
+  "train_samples": 287,
+  "validation_samples": 96,
+  "payload_keys": [
+    "client_id",
+    "weights",
+    "num_samples"
+  ],
+  "raw_data_sent": false,
+  "before": {
+    "loss": 0.5316,
+    "accuracy": 0.9167,
+    "f1": 0.9098
+  },
+  "after": {
+    "loss": 0.0605,
+    "accuracy": 0.9479,
+    "f1": 0.9462
+  }
+}

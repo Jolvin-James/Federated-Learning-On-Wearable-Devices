@@ -1,0 +1,47 @@
+{
+  "updated_at": "2026-05-01 13:29:18",
+  "event_count": 211,
+  "status": "completed",
+  "current_stage": "complete",
+  "summary": {
+    "status": "completed",
+    "rounds": 10,
+    "holdout_client": 30,
+    "training_clients": 29,
+    "elapsed_sec": 89.94,
+    "centralized": {
+      "accuracy": 0.9556,
+      "f1": 0.9546,
+      "loss": 0.1152,
+      "training_time_sec": 9.43
+    },
+    "federated": {
+      "accuracy": 0.9399,
+      "f1": 0.9374,
+      "loss": 0.3567,
+      "training_time_sec": 62.05,
+      "rounds": 10
+    },
+    "new_client": {
+      "client_id": 30,
+      "train_samples": 287,
+      "validation_samples": 96,
+      "payload_keys": [
+        "client_id",
+        "weights",
+        "num_samples"
+      ],
+      "raw_data_sent": false,
+      "before": {
+        "loss": 0.5316,
+        "accuracy": 0.9167,
+        "f1": 0.9098
+      },
+      "after": {
+        "loss": 0.0605,
+        "accuracy": 0.9479,
+        "f1": 0.9462
+      }
+    }
+  }
+}

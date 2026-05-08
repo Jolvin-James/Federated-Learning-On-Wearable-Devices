@@ -37,6 +37,11 @@ PORT = 5000
 BUFFER = 4096
 FL_PACKET_DEMO_DELAY_SEC = 0.15
 
+
+def emit_dashboard_event(event_hook, event_type, title, **fields):
+    if event_hook is not None:
+        event_hook(event_type, title, **fields)
+
 def recvall(conn, n):
     data = b""
     while len(data) < n:
@@ -314,7 +319,8 @@ def run_federated_training(
     client_splits,
     partitioner,
     device,
-    rounds=15
+    rounds=15,
+    event_hook=None
 ):
     print("\n========== FEDERATED TRAINING ==========")
     print("Wireshark Filter -> tcp.port == 5000")
@@ -340,6 +346,14 @@ def run_federated_training(
         client.receive_global_model(global_weights)
         clients[cid] = client
 
+    emit_dashboard_event(
+        event_hook,
+        "clients",
+        "Federated clients initialized",
+        client_count=len(clients),
+        client_ids=sorted(int(cid) for cid in clients.keys()),
+    )
+
     mean, std = compute_norm_stats(client_splits)
 
     for cid in client_splits:
@@ -360,6 +374,15 @@ def run_federated_training(
         selected = random.sample(
             list(clients.keys()),
             max(2, int(len(clients) * 0.6))
+        )
+
+        emit_dashboard_event(
+            event_hook,
+            "round_started",
+            f"Federated round {round_num} started",
+            round=round_num,
+            selected_clients=sorted(int(cid) for cid in selected),
+            selected_count=len(selected),
         )
 
         sock = socket.socket(
@@ -398,6 +421,17 @@ def run_federated_training(
                     "num_samples": len(data["X_train"])
                 }
 
+                emit_dashboard_event(
+                    event_hook,
+                    "client_update",
+                    f"Client {cid} sent model update",
+                    round=round_num,
+                    client_id=int(cid),
+                    num_samples=int(len(data["X_train"])),
+                    payload_keys=list(payload.keys()),
+                    raw_data_sent=False,
+                )
+
                 send_payload(payload)
                 print(
                     f"[SOCKET] Client {cid} sent model update "
@@ -422,6 +456,16 @@ def run_federated_training(
 
         global_weights = server.fedavg_aggregate()
 
+        emit_dashboard_event(
+            event_hook,
+            "aggregation",
+            f"Server aggregated round {round_num}",
+            round=round_num,
+            received_updates=len(received_updates),
+            total_samples=int(server.total_samples),
+            method="FedAvg",
+        )
+
         server.update_global_model(global_weights)
 
         server.broadcast_global_model(clients)
@@ -441,6 +485,15 @@ def run_federated_training(
             f"[ROUND {round_num}] "
             f"Acc={acc:.4f} | "
             f"F1={f1:.4f}"
+        )
+
+        emit_dashboard_event(
+            event_hook,
+            "round_completed",
+            f"Round {round_num} evaluation complete",
+            round=round_num,
+            accuracy=round(float(acc), 4),
+            f1=round(float(f1), 4),
         )
 
         if acc > best_acc:
