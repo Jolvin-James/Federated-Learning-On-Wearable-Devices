@@ -2,12 +2,14 @@
 
 import argparse
 import copy
+import json
 import os
 import pickle
 import random
 import socket
 import struct
 import sys
+import threading
 import time
 
 import torch
@@ -30,7 +32,6 @@ from torch.utils.data import DataLoader, TensorDataset
 
 from src.data_loader import UCIHARDataLoader
 from src.partition import UserPartitioner
-from src.centralized_data import CentralizedDataBuilder
 from src.model import HAR_CNN
 from src.model_utils import reshape_for_cnn
 from src.client import FLClient
@@ -46,6 +47,7 @@ def set_seed(seed=42):
 
 HOST = "127.0.0.1"
 PORT = 5000
+CENTRALIZED_PORT = 5001
 BUFFER = 4096
 
 ACTIVITY_LABELS = [
@@ -77,6 +79,22 @@ def send_payload(payload):
     s.close()
 
 
+def encode_json_payload(payload):
+    return json.dumps(payload, indent=2).encode("utf-8")
+
+
+def send_json_payload(payload, port):
+    raw = encode_json_payload(payload)
+    header = struct.pack(">Q", len(raw))
+
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect((HOST, port))
+    s.sendall(header + raw)
+    s.close()
+
+    return len(raw)
+
+
 def receive_payload(conn):
     header = recvall(conn, 8)
 
@@ -90,6 +108,152 @@ def receive_payload(conn):
         return None
 
     return pickle.loads(body)
+
+
+def receive_json_payload(conn):
+    header = recvall(conn, 8)
+
+    if not header:
+        return None
+
+    msg_len = struct.unpack(">Q", header)[0]
+    body = recvall(conn, msg_len)
+
+    if not body:
+        return None
+
+    return json.loads(body.decode("utf-8")), msg_len
+
+
+def build_centralized_client_payload(client_id, split):
+    X_train = split["X_train"]
+    y_train = split["y_train"]
+
+    return {
+        "client_id": int(client_id),
+        "feature_columns": list(X_train.columns),
+        "raw_sensor_data": X_train.values.tolist(),
+        "activity_labels": y_train.astype(int).tolist(),
+        "num_samples": int(len(X_train)),
+        "description": (
+            "Centralized upload: raw HAR sensor windows and activity labels "
+            "sent to the central server for training."
+        ),
+    }
+
+
+def validate_centralized_payload(payload):
+    required_keys = {
+        "client_id",
+        "feature_columns",
+        "raw_sensor_data",
+        "activity_labels",
+        "num_samples",
+    }
+
+    missing = required_keys - set(payload.keys())
+    if missing:
+        raise ValueError(f"Centralized payload missing keys: {sorted(missing)}")
+
+    if len(payload["raw_sensor_data"]) != payload["num_samples"]:
+        raise ValueError("Centralized payload sample count mismatch")
+
+    if len(payload["activity_labels"]) != payload["num_samples"]:
+        raise ValueError("Centralized payload label count mismatch")
+
+
+def reconstruct_centralized_training_data(payloads, shuffle=True):
+    if not payloads:
+        raise ValueError("No centralized payloads received")
+
+    X_parts = []
+    y_parts = []
+
+    for payload in sorted(payloads, key=lambda row: row["client_id"]):
+        validate_centralized_payload(payload)
+
+        X_parts.append(
+            pd.DataFrame(
+                payload["raw_sensor_data"],
+                columns=payload["feature_columns"],
+            )
+        )
+        y_parts.append(pd.Series(payload["activity_labels"]))
+
+    X_train = pd.concat(X_parts, axis=0).reset_index(drop=True)
+    y_train = pd.concat(y_parts, axis=0).reset_index(drop=True)
+
+    if shuffle:
+        rng = np.random.RandomState(42)
+        perm = rng.permutation(len(X_train))
+        X_train = X_train.iloc[perm].reset_index(drop=True)
+        y_train = y_train.iloc[perm].reset_index(drop=True)
+
+    return X_train, y_train
+
+
+def collect_centralized_training_data(client_splits):
+    if not client_splits:
+        raise ValueError("No client splits available for centralized upload")
+
+    print("\n========== CENTRALIZED RAW-DATA UPLOAD ==========")
+    print("Wireshark Filter -> tcp.port == 5001")
+
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    sock.bind((HOST, CENTRALIZED_PORT))
+    sock.listen(1)
+
+    received_payloads = []
+    total_bytes = 0
+
+    try:
+        for client_id in sorted(client_splits.keys()):
+            payload = build_centralized_client_payload(
+                client_id,
+                client_splits[client_id],
+            )
+
+            sender = threading.Thread(
+                target=send_json_payload,
+                args=(payload, CENTRALIZED_PORT),
+            )
+            sender.start()
+
+            conn, _ = sock.accept()
+            received = receive_json_payload(conn)
+            conn.close()
+            sender.join(timeout=10)
+
+            if received is None:
+                raise RuntimeError(f"No centralized payload received from Client {client_id}")
+
+            received_payload, received_bytes = received
+            validate_centralized_payload(received_payload)
+
+            received_payloads.append(received_payload)
+            total_bytes += received_bytes
+
+            print(f"[CENTRALIZED] Client {client_id} raw data received")
+            print("Payload Keys   :", list(received_payload.keys()))
+            print("Rows Received  :", received_payload["num_samples"])
+            print("Size (KB)      :", round(received_bytes / 1024, 2))
+            print("Privacy Risk   : True")
+
+    finally:
+        sock.close()
+
+    X_train_raw, y_train_raw = reconstruct_centralized_training_data(
+        received_payloads,
+        shuffle=True,
+    )
+
+    print("\n[CENTRALIZED] Raw-data upload complete")
+    print("Clients Received :", len(received_payloads))
+    print("Total Samples    :", len(X_train_raw))
+    print("Total Size (KB)  :", round(total_bytes / 1024, 2))
+
+    return X_train_raw, y_train_raw
 
 class Logger(object):
     def __init__(self, filename="results/terminal_logs.txt"):
@@ -250,15 +414,7 @@ def run_centralized_training(
 
     start_time = time.time()
 
-    builder = CentralizedDataBuilder(client_splits)
-
-    global_data = builder.combine_all_clients(
-        add_client_id=False,
-        shuffle=True
-    )
-
-    X_train_raw = global_data["X_train"]
-    y_train_raw = global_data["y_train"]
+    X_train_raw, y_train_raw = collect_centralized_training_data(client_splits)
 
     X_test_raw, y_test_raw = partitioner.get_global_test()
 

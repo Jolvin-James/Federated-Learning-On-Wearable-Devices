@@ -1,0 +1,12 @@
+true_label,predicted_label,count
+Standing,Sitting,118
+Sitting,Standing,90
+Upstairs,Downstairs,33
+Laying,Upstairs,27
+Downstairs,Upstairs,19
+Upstairs,Walking,14
+Downstairs,Walking,9
+Upstairs,Sitting,6
+Walking,Upstairs,3
+Sitting,Upstairs,3
+Walking,Downstairs,2

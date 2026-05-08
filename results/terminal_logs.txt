@@ -1,0 +1,6479 @@
+Using Device: cuda
+
+[INFO] Creating client datasets (training subjects only)...
+[INFO] Total FL clients (train subjects): 21
+
+[INFO] Performing local train/val split for each client...
+[INFO] Successfully split 21 clients
+
+========== CENTRALIZED TRAINING ==========
+
+========== CENTRALIZED RAW-DATA UPLOAD ==========
+Wireshark Filter -> tcp.port == 5001
+[CENTRALIZED] Client 1 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 277
+Size (KB)      : 5637.33
+Privacy Risk   : True
+[CENTRALIZED] Client 3 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 272
+Size (KB)      : 5550.66
+Privacy Risk   : True
+[CENTRALIZED] Client 5 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 241
+Size (KB)      : 4917.96
+Privacy Risk   : True
+[CENTRALIZED] Client 6 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 260
+Size (KB)      : 5308.17
+Privacy Risk   : True
+[CENTRALIZED] Client 7 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 246
+Size (KB)      : 5020.48
+Privacy Risk   : True
+[CENTRALIZED] Client 8 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 224
+Size (KB)      : 4580.3
+Privacy Risk   : True
+[CENTRALIZED] Client 11 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 252
+Size (KB)      : 5153.1
+Privacy Risk   : True
+[CENTRALIZED] Client 14 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 258
+Size (KB)      : 5255.23
+Privacy Risk   : True
+[CENTRALIZED] Client 15 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 262
+Size (KB)      : 5365.5
+Privacy Risk   : True
+[CENTRALIZED] Client 16 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 292
+Size (KB)      : 5997.87
+Privacy Risk   : True
+[CENTRALIZED] Client 17 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 294
+Size (KB)      : 6043.16
+Privacy Risk   : True
+[CENTRALIZED] Client 19 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 288
+Size (KB)      : 5897.95
+Privacy Risk   : True
+[CENTRALIZED] Client 21 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 326
+Size (KB)      : 6701.1
+Privacy Risk   : True
+[CENTRALIZED] Client 22 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 256
+Size (KB)      : 5236.94
+Privacy Risk   : True
+[CENTRALIZED] Client 23 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 297
+Size (KB)      : 6079.67
+Privacy Risk   : True
+[CENTRALIZED] Client 25 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 327
+Size (KB)      : 6655.81
+Privacy Risk   : True
+[CENTRALIZED] Client 26 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 313
+Size (KB)      : 6427.48
+Privacy Risk   : True
+[CENTRALIZED] Client 27 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 300
+Size (KB)      : 6183.04
+Privacy Risk   : True
+[CENTRALIZED] Client 28 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 305
+Size (KB)      : 6253.78
+Privacy Risk   : True
+[CENTRALIZED] Client 29 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 275
+Size (KB)      : 5656.63
+Privacy Risk   : True
+[CENTRALIZED] Client 30 raw data received
+Payload Keys   : ['client_id', 'feature_columns', 'raw_sensor_data', 'activity_labels', 'num_samples', 'description']
+Rows Received  : 306
+Size (KB)      : 6240.24
+Privacy Risk   : True
+
+[CENTRALIZED] Raw-data upload complete
+Clients Received : 21
+Total Samples    : 5871
+Total Size (KB)  : 120162.41
+Epoch 1/10 | Loss=0.3523 | Acc=0.8979 | F1=0.8955
+Epoch 2/10 | Loss=0.1341 | Acc=0.9145 | F1=0.9138
+Epoch 3/10 | Loss=0.1261 | Acc=0.9040 | F1=0.9038
+Epoch 4/10 | Loss=0.1157 | Acc=0.9223 | F1=0.9216
+Epoch 5/10 | Loss=0.1096 | Acc=0.9131 | F1=0.9128
+Epoch 6/10 | Loss=0.1148 | Acc=0.9084 | F1=0.9084
+Epoch 7/10 | Loss=0.1170 | Acc=0.9206 | F1=0.9205
+Epoch 8/10 | Loss=0.1091 | Acc=0.9141 | F1=0.9141
+Epoch 9/10 | Loss=0.1123 | Acc=0.9108 | F1=0.9107
+Epoch 10/10 | Loss=0.0980 | Acc=0.9199 | F1=0.9196
+C:\Users\Manas\Documents\Playground\capstone_project\main.py:503: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  torch.load("results/centralized_best.pth", map_location=device)
+Saved: results/centralized_history.csv
+
+========== Centralized TEST ==========
+Loss     : 0.2064
+Accuracy : 0.9223
+F1 Score : 0.9216
+
+Confusion Matrix:
+[[496   0   0   0   0   0]
+ [  9 452  10   0   0   0]
+ [  3   3 414   0   0   0]
+ [  0  25   0 374  92   0]
+ [  0   0   0  60 472   0]
+ [  0  27   0   0   0 510]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Walking     0.9764    1.0000    0.9880       496
+    Upstairs     0.8915    0.9597    0.9243       471
+  Downstairs     0.9764    0.9857    0.9810       420
+     Sitting     0.8618    0.7617    0.8086       491
+    Standing     0.8369    0.8872    0.8613       532
+      Laying     1.0000    0.9497    0.9742       537
+
+    accuracy                         0.9223      2947
+   macro avg     0.9238    0.9240    0.9229      2947
+weighted avg     0.9228    0.9223    0.9216      2947
+
+Saved: results/centralized_classification_report.csv
+Saved: results/centralized_confusion_matrix.png
+Saved: results/centralized_confusion_matrix.csv
+Saved: results/centralized_top_confusions.csv
+Saved: results/centralized_confusion_matrix_percent.png
+
+========== FEDERATED TRAINING ==========
+Wireshark Filter -> tcp.port == 5000
+
+========== ROUND 1 ==========
+[Client 30] Epoch 1/2 | Loss: 1.2213
+[Client 30] Epoch 2/2 | Loss: 0.3775
+[Client 30] Update Norm: 28.7032
+[Client 6] Epoch 1/2 | Loss: 1.1433
+[Client 6] Epoch 2/2 | Loss: 0.4465
+[Client 6] Update Norm: 27.6767
+[Client 1] Epoch 1/2 | Loss: 1.2555
+[Client 1] Epoch 2/2 | Loss: 0.3159
+[Client 1] Update Norm: 27.8982
+[Client 15] Epoch 1/2 | Loss: 1.2801
+[Client 15] Epoch 2/2 | Loss: 0.5065
+[Client 15] Update Norm: 28.1561
+[Client 14] Epoch 1/2 | Loss: 1.1870
+[Client 14] Epoch 2/2 | Loss: 0.5319
+[Client 14] Update Norm: 27.5815
+[Client 26] Epoch 1/2 | Loss: 1.1641
+[Client 26] Epoch 2/2 | Loss: 0.3140
+[Client 26] Update Norm: 29.3286
+[Client 5] Epoch 1/2 | Loss: 1.3228
+[Client 5] Epoch 2/2 | Loss: 0.5072
+[Client 5] Update Norm: 26.7047
+[Client 19] Epoch 1/2 | Loss: 1.1098
+[Client 19] Epoch 2/2 | Loss: 0.3806
+[Client 19] Update Norm: 27.6198
+[Client 3] Epoch 1/2 | Loss: 1.2337
+[Client 3] Epoch 2/2 | Loss: 0.4430
+[Client 3] Update Norm: 28.4499
+[Client 17] Epoch 1/2 | Loss: 1.1316
+[Client 17] Epoch 2/2 | Loss: 0.5826
+[Client 17] Update Norm: 29.2573
+[Client 27] Epoch 1/2 | Loss: 1.0810
+[Client 27] Epoch 2/2 | Loss: 0.2494
+[Client 27] Update Norm: 29.2831
+[Client 21] Epoch 1/2 | Loss: 1.0942
+[Client 21] Epoch 2/2 | Loss: 0.3014
+[Client 21] Update Norm: 30.0691
+[Client 11] Epoch 1/2 | Loss: 1.2437
+[Client 11] Epoch 2/2 | Loss: 0.4529
+[Client 11] Update Norm: 26.8921
+[Client 28] Epoch 1/2 | Loss: 1.1976
+[Client 28] Epoch 2/2 | Loss: 0.5022
+[Client 28] Update Norm: 29.5897
+[Client 25] Epoch 1/2 | Loss: 1.1969
+[Client 25] Epoch 2/2 | Loss: 0.3123
+[Client 25] Update Norm: 30.0847
+[Client 22] Epoch 1/2 | Loss: 1.2459
+[Client 22] Epoch 2/2 | Loss: 0.4151
+[Client 22] Update Norm: 26.5696
+[Client 16] Epoch 1/2 | Loss: 1.1029
+[Client 16] Epoch 2/2 | Loss: 0.5754
+[Client 16] Update Norm: 29.3394
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 1
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 1
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 277
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 17
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 17
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 294
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 28
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 28
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 305
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 22
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 22
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 256
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 1
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4829
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 74.0429
+Norm After  : 63.1138
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 1] Acc=0.6620 | F1=0.6358
+
+========== ROUND 2 ==========
+[Client 14] Epoch 1/2 | Loss: 0.5355
+[Client 14] Epoch 2/2 | Loss: 0.2044
+[Client 14] Update Norm: 11.4163
+[Client 26] Epoch 1/2 | Loss: 0.3246
+[Client 26] Epoch 2/2 | Loss: 0.0804
+[Client 26] Update Norm: 11.0815
+[Client 1] Epoch 1/2 | Loss: 0.3012
+[Client 1] Epoch 2/2 | Loss: 0.0516
+[Client 1] Update Norm: 10.7906
+[Client 27] Epoch 1/2 | Loss: 0.2587
+[Client 27] Epoch 2/2 | Loss: 0.0432
+[Client 27] Update Norm: 11.1883
+[Client 11] Epoch 1/2 | Loss: 0.3861
+[Client 11] Epoch 2/2 | Loss: 0.1488
+[Client 11] Update Norm: 10.1559
+[Client 22] Epoch 1/2 | Loss: 0.5098
+[Client 22] Epoch 2/2 | Loss: 0.1148
+[Client 22] Update Norm: 9.4526
+[Client 6] Epoch 1/2 | Loss: 0.5634
+[Client 6] Epoch 2/2 | Loss: 0.6146
+[Client 6] Update Norm: 10.2582
+[Client 30] Epoch 1/2 | Loss: 0.5110
+[Client 30] Epoch 2/2 | Loss: 0.1386
+[Client 30] Update Norm: 10.8526
+[Client 16] Epoch 1/2 | Loss: 0.7628
+[Client 16] Epoch 2/2 | Loss: 0.3010
+[Client 16] Update Norm: 10.8666
+[Client 7] Epoch 1/2 | Loss: 0.6214
+[Client 7] Epoch 2/2 | Loss: 0.2284
+[Client 7] Update Norm: 9.9114
+[Client 28] Epoch 1/2 | Loss: 0.4882
+[Client 28] Epoch 2/2 | Loss: 0.2577
+[Client 28] Update Norm: 11.2866
+[Client 5] Epoch 1/2 | Loss: 0.5491
+[Client 5] Epoch 2/2 | Loss: 0.2918
+[Client 5] Update Norm: 10.1492
+[Client 29] Epoch 1/2 | Loss: 0.3259
+[Client 29] Epoch 2/2 | Loss: 0.1777
+[Client 29] Update Norm: 10.6534
+[Client 8] Epoch 1/2 | Loss: 0.4908
+[Client 8] Epoch 2/2 | Loss: 0.1459
+[Client 8] Update Norm: 9.2186
+[Client 21] Epoch 1/2 | Loss: 0.3372
+[Client 21] Epoch 2/2 | Loss: 0.1169
+[Client 21] Update Norm: 11.5772
+[Client 3] Epoch 1/2 | Loss: 0.3927
+[Client 3] Epoch 2/2 | Loss: 0.0862
+[Client 3] Update Norm: 10.7845
+[Client 25] Epoch 1/2 | Loss: 0.5373
+[Client 25] Epoch 2/2 | Loss: 0.1044
+[Client 25] Update Norm: 11.4565
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 1
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 1
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 277
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 22
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 22
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 256
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 28
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 28
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 305
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 2
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4730
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 63.1138
+Norm After  : 60.7575
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 2] Acc=0.8358 | F1=0.8345
+
+========== ROUND 3 ==========
+[Client 17] Epoch 1/2 | Loss: 0.2674
+[Client 17] Epoch 2/2 | Loss: 0.0770
+[Client 17] Update Norm: 6.2359
+[Client 6] Epoch 1/2 | Loss: 0.4040
+[Client 6] Epoch 2/2 | Loss: 0.1501
+[Client 6] Update Norm: 6.0617
+[Client 5] Epoch 1/2 | Loss: 0.5242
+[Client 5] Epoch 2/2 | Loss: 0.2908
+[Client 5] Update Norm: 6.2563
+[Client 21] Epoch 1/2 | Loss: 0.0765
+[Client 21] Epoch 2/2 | Loss: 0.0285
+[Client 21] Update Norm: 6.8064
+[Client 29] Epoch 1/2 | Loss: 0.0609
+[Client 29] Epoch 2/2 | Loss: 0.0462
+[Client 29] Update Norm: 6.3482
+[Client 19] Epoch 1/2 | Loss: 0.0457
+[Client 19] Epoch 2/2 | Loss: 0.2245
+[Client 19] Update Norm: 6.6758
+[Client 22] Epoch 1/2 | Loss: 0.2298
+[Client 22] Epoch 2/2 | Loss: 0.0418
+[Client 22] Update Norm: 5.8506
+[Client 8] Epoch 1/2 | Loss: 0.2699
+[Client 8] Epoch 2/2 | Loss: 0.0896
+[Client 8] Update Norm: 5.5414
+[Client 16] Epoch 1/2 | Loss: 0.4458
+[Client 16] Epoch 2/2 | Loss: 0.3658
+[Client 16] Update Norm: 7.8076
+[Client 7] Epoch 1/2 | Loss: 0.2571
+[Client 7] Epoch 2/2 | Loss: 0.0598
+[Client 7] Update Norm: 6.0408
+[Client 1] Epoch 1/2 | Loss: 0.0821
+[Client 1] Epoch 2/2 | Loss: 0.0253
+[Client 1] Update Norm: 6.4564
+[Client 14] Epoch 1/2 | Loss: 0.4165
+[Client 14] Epoch 2/2 | Loss: 0.3835
+[Client 14] Update Norm: 7.7240
+[Client 15] Epoch 1/2 | Loss: 0.1921
+[Client 15] Epoch 2/2 | Loss: 0.0576
+[Client 15] Update Norm: 6.2798
+[Client 3] Epoch 1/2 | Loss: 0.1561
+[Client 3] Epoch 2/2 | Loss: 0.0410
+[Client 3] Update Norm: 6.0130
+[Client 26] Epoch 1/2 | Loss: 0.1089
+[Client 26] Epoch 2/2 | Loss: 0.0859
+[Client 26] Update Norm: 6.7830
+[Client 30] Epoch 1/2 | Loss: 0.2264
+[Client 30] Epoch 2/2 | Loss: 0.1670
+[Client 30] Update Norm: 6.8546
+[Client 25] Epoch 1/2 | Loss: 0.2025
+[Client 25] Epoch 2/2 | Loss: 0.1462
+[Client 25] Update Norm: 7.0819
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 17
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 17
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 294
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 22
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 22
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 256
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 1
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 1
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 277
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 3
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4717
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 60.7575
+Norm After  : 60.5632
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 3] Acc=0.8616 | F1=0.8614
+
+========== ROUND 4 ==========
+[Client 16] Epoch 1/2 | Loss: 0.4895
+[Client 16] Epoch 2/2 | Loss: 0.1968
+[Client 16] Update Norm: 7.6618
+[Client 29] Epoch 1/2 | Loss: 0.0819
+[Client 29] Epoch 2/2 | Loss: 0.0990
+[Client 29] Update Norm: 5.4116
+[Client 19] Epoch 1/2 | Loss: 0.0386
+[Client 19] Epoch 2/2 | Loss: 0.0283
+[Client 19] Update Norm: 6.3912
+[Client 11] Epoch 1/2 | Loss: 0.1574
+[Client 11] Epoch 2/2 | Loss: 0.0220
+[Client 11] Update Norm: 5.1990
+[Client 5] Epoch 1/2 | Loss: 0.2511
+[Client 5] Epoch 2/2 | Loss: 0.1719
+[Client 5] Update Norm: 6.1465
+[Client 3] Epoch 1/2 | Loss: 0.1244
+[Client 3] Epoch 2/2 | Loss: 0.0592
+[Client 3] Update Norm: 5.9391
+[Client 17] Epoch 1/2 | Loss: 0.1067
+[Client 17] Epoch 2/2 | Loss: 0.2523
+[Client 17] Update Norm: 6.2059
+[Client 6] Epoch 1/2 | Loss: 0.1178
+[Client 6] Epoch 2/2 | Loss: 0.0723
+[Client 6] Update Norm: 6.3214
+[Client 21] Epoch 1/2 | Loss: 0.0463
+[Client 21] Epoch 2/2 | Loss: 0.0152
+[Client 21] Update Norm: 6.5225
+[Client 7] Epoch 1/2 | Loss: 0.1853
+[Client 7] Epoch 2/2 | Loss: 0.0497
+[Client 7] Update Norm: 5.8551
+[Client 25] Epoch 1/2 | Loss: 0.0803
+[Client 25] Epoch 2/2 | Loss: 0.0216
+[Client 25] Update Norm: 7.0438
+[Client 22] Epoch 1/2 | Loss: 0.0257
+[Client 22] Epoch 2/2 | Loss: 0.0244
+[Client 22] Update Norm: 5.2104
+[Client 23] Epoch 1/2 | Loss: 0.2576
+[Client 23] Epoch 2/2 | Loss: 0.0726
+[Client 23] Update Norm: 6.1842
+[Client 27] Epoch 1/2 | Loss: 0.1763
+[Client 27] Epoch 2/2 | Loss: 0.0045
+[Client 27] Update Norm: 6.1382
+[Client 26] Epoch 1/2 | Loss: 0.2072
+[Client 26] Epoch 2/2 | Loss: 0.0960
+[Client 26] Update Norm: 6.2814
+[Client 30] Epoch 1/2 | Loss: 0.2179
+[Client 30] Epoch 2/2 | Loss: 0.0955
+[Client 30] Update Norm: 6.4371
+[Client 14] Epoch 1/2 | Loss: 0.3393
+[Client 14] Epoch 2/2 | Loss: 1.1508
+[Client 14] Update Norm: 7.3141
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 17
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 17
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 294
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 22
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 22
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 256
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 23
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 23
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 297
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 4
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4803
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 60.5632
+Norm After  : 60.4509
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 4] Acc=0.8622 | F1=0.8615
+
+========== ROUND 5 ==========
+[Client 8] Epoch 1/2 | Loss: 0.2180
+[Client 8] Epoch 2/2 | Loss: 0.0156
+[Client 8] Update Norm: 5.0414
+[Client 19] Epoch 1/2 | Loss: 0.0456
+[Client 19] Epoch 2/2 | Loss: 0.0289
+[Client 19] Update Norm: 5.9110
+[Client 29] Epoch 1/2 | Loss: 0.0225
+[Client 29] Epoch 2/2 | Loss: 0.0515
+[Client 29] Update Norm: 5.2474
+[Client 11] Epoch 1/2 | Loss: 0.1982
+[Client 11] Epoch 2/2 | Loss: 0.2606
+[Client 11] Update Norm: 5.7445
+[Client 15] Epoch 1/2 | Loss: 0.2106
+[Client 15] Epoch 2/2 | Loss: 0.0300
+[Client 15] Update Norm: 5.9134
+[Client 5] Epoch 1/2 | Loss: 0.3297
+[Client 5] Epoch 2/2 | Loss: 0.1608
+[Client 5] Update Norm: 5.6717
+[Client 16] Epoch 1/2 | Loss: 0.5773
+[Client 16] Epoch 2/2 | Loss: 0.2451
+[Client 16] Update Norm: 8.0038
+[Client 17] Epoch 1/2 | Loss: 0.4264
+[Client 17] Epoch 2/2 | Loss: 0.0985
+[Client 17] Update Norm: 5.8362
+[Client 25] Epoch 1/2 | Loss: 0.0413
+[Client 25] Epoch 2/2 | Loss: 0.0196
+[Client 25] Update Norm: 6.3703
+[Client 26] Epoch 1/2 | Loss: 0.0750
+[Client 26] Epoch 2/2 | Loss: 0.0220
+[Client 26] Update Norm: 6.4699
+[Client 6] Epoch 1/2 | Loss: 0.2322
+[Client 6] Epoch 2/2 | Loss: 0.0663
+[Client 6] Update Norm: 5.8030
+[Client 21] Epoch 1/2 | Loss: 0.0113
+[Client 21] Epoch 2/2 | Loss: 0.0159
+[Client 21] Update Norm: 6.1530
+[Client 14] Epoch 1/2 | Loss: 0.1343
+[Client 14] Epoch 2/2 | Loss: 0.3480
+[Client 14] Update Norm: 7.0754
+[Client 27] Epoch 1/2 | Loss: 0.0247
+[Client 27] Epoch 2/2 | Loss: 0.0155
+[Client 27] Update Norm: 6.2066
+[Client 23] Epoch 1/2 | Loss: 0.2459
+[Client 23] Epoch 2/2 | Loss: 0.0932
+[Client 23] Update Norm: 5.9429
+[Client 30] Epoch 1/2 | Loss: 0.2280
+[Client 30] Epoch 2/2 | Loss: 0.0757
+[Client 30] Update Norm: 7.3140
+[Client 7] Epoch 1/2 | Loss: 0.1431
+[Client 7] Epoch 2/2 | Loss: 0.1418
+[Client 7] Update Norm: 5.3890
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 17
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 17
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 294
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 23
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 23
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 297
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 5
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4761
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 60.4509
+Norm After  : 60.3342
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 5] Acc=0.8707 | F1=0.8705
+
+========== ROUND 6 ==========
+[Client 14] Epoch 1/2 | Loss: 0.1953
+[Client 14] Epoch 2/2 | Loss: 0.1230
+[Client 14] Update Norm: 6.7912
+[Client 17] Epoch 1/2 | Loss: 0.2563
+[Client 17] Epoch 2/2 | Loss: 0.0090
+[Client 17] Update Norm: 6.2266
+[Client 3] Epoch 1/2 | Loss: 0.0648
+[Client 3] Epoch 2/2 | Loss: 0.0286
+[Client 3] Update Norm: 5.2761
+[Client 30] Epoch 1/2 | Loss: 0.1466
+[Client 30] Epoch 2/2 | Loss: 0.1000
+[Client 30] Update Norm: 6.7576
+[Client 28] Epoch 1/2 | Loss: 0.4381
+[Client 28] Epoch 2/2 | Loss: 0.3531
+[Client 28] Update Norm: 7.9691
+[Client 29] Epoch 1/2 | Loss: 0.1198
+[Client 29] Epoch 2/2 | Loss: 0.0313
+[Client 29] Update Norm: 5.5129
+[Client 11] Epoch 1/2 | Loss: 0.0283
+[Client 11] Epoch 2/2 | Loss: 0.0046
+[Client 11] Update Norm: 5.2218
+[Client 7] Epoch 1/2 | Loss: 0.1544
+[Client 7] Epoch 2/2 | Loss: 0.2145
+[Client 7] Update Norm: 5.1949
+[Client 26] Epoch 1/2 | Loss: 0.1044
+[Client 26] Epoch 2/2 | Loss: 0.0970
+[Client 26] Update Norm: 6.5004
+[Client 6] Epoch 1/2 | Loss: 0.1266
+[Client 6] Epoch 2/2 | Loss: 0.3064
+[Client 6] Update Norm: 6.3337
+[Client 16] Epoch 1/2 | Loss: 0.5025
+[Client 16] Epoch 2/2 | Loss: 0.1890
+[Client 16] Update Norm: 8.0841
+[Client 8] Epoch 1/2 | Loss: 0.2123
+[Client 8] Epoch 2/2 | Loss: 0.0522
+[Client 8] Update Norm: 4.9798
+[Client 19] Epoch 1/2 | Loss: 0.1214
+[Client 19] Epoch 2/2 | Loss: 0.0314
+[Client 19] Update Norm: 5.8315
+[Client 27] Epoch 1/2 | Loss: 0.0243
+[Client 27] Epoch 2/2 | Loss: 0.0070
+[Client 27] Update Norm: 5.6284
+[Client 15] Epoch 1/2 | Loss: 0.0552
+[Client 15] Epoch 2/2 | Loss: 0.1154
+[Client 15] Update Norm: 5.1783
+[Client 25] Epoch 1/2 | Loss: 0.0607
+[Client 25] Epoch 2/2 | Loss: 0.0383
+[Client 25] Update Norm: 7.0205
+[Client 23] Epoch 1/2 | Loss: 0.3249
+[Client 23] Epoch 2/2 | Loss: 0.1398
+[Client 23] Update Norm: 5.8083
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 17
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 17
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 294
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 28
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 28
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 305
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 6
+Client         : 23
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 23
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 297
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4771
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 60.3342
+Norm After  : 60.2369
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 6] Acc=0.8670 | F1=0.8677
+
+========== ROUND 7 ==========
+[Client 7] Epoch 1/2 | Loss: 0.1073
+[Client 7] Epoch 2/2 | Loss: 0.0935
+[Client 7] Update Norm: 5.4091
+[Client 15] Epoch 1/2 | Loss: 0.0534
+[Client 15] Epoch 2/2 | Loss: 0.0779
+[Client 15] Update Norm: 5.1733
+[Client 30] Epoch 1/2 | Loss: 0.2547
+[Client 30] Epoch 2/2 | Loss: 0.1123
+[Client 30] Update Norm: 6.8806
+[Client 14] Epoch 1/2 | Loss: 0.7152
+[Client 14] Epoch 2/2 | Loss: 0.0505
+[Client 14] Update Norm: 7.3127
+[Client 29] Epoch 1/2 | Loss: 0.0447
+[Client 29] Epoch 2/2 | Loss: 0.0208
+[Client 29] Update Norm: 5.4988
+[Client 22] Epoch 1/2 | Loss: 0.0030
+[Client 22] Epoch 2/2 | Loss: 0.0011
+[Client 22] Update Norm: 5.1536
+[Client 23] Epoch 1/2 | Loss: 0.0981
+[Client 23] Epoch 2/2 | Loss: 0.0718
+[Client 23] Update Norm: 5.9320
+[Client 16] Epoch 1/2 | Loss: 1.1226
+[Client 16] Epoch 2/2 | Loss: 0.2312
+[Client 16] Update Norm: 7.1489
+[Client 11] Epoch 1/2 | Loss: 0.1434
+[Client 11] Epoch 2/2 | Loss: 0.0382
+[Client 11] Update Norm: 4.8908
+[Client 8] Epoch 1/2 | Loss: 0.0192
+[Client 8] Epoch 2/2 | Loss: 0.1236
+[Client 8] Update Norm: 4.7640
+[Client 6] Epoch 1/2 | Loss: 0.2858
+[Client 6] Epoch 2/2 | Loss: 0.2440
+[Client 6] Update Norm: 5.7027
+[Client 5] Epoch 1/2 | Loss: 0.3600
+[Client 5] Epoch 2/2 | Loss: 0.1436
+[Client 5] Update Norm: 5.7420
+[Client 26] Epoch 1/2 | Loss: 0.0253
+[Client 26] Epoch 2/2 | Loss: 0.1520
+[Client 26] Update Norm: 6.2500
+[Client 27] Epoch 1/2 | Loss: 0.0444
+[Client 27] Epoch 2/2 | Loss: 0.0733
+[Client 27] Update Norm: 5.9169
+[Client 1] Epoch 1/2 | Loss: 0.0850
+[Client 1] Epoch 2/2 | Loss: 0.0485
+[Client 1] Update Norm: 5.8079
+[Client 21] Epoch 1/2 | Loss: 0.0644
+[Client 21] Epoch 2/2 | Loss: 0.1029
+[Client 21] Update Norm: 6.6120
+[Client 19] Epoch 1/2 | Loss: 0.0627
+[Client 19] Epoch 2/2 | Loss: 0.0114
+[Client 19] Update Norm: 6.1422
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 22
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 22
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 256
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 23
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 23
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 297
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 1
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 1
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 277
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 7
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4673
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 60.2369
+Norm After  : 60.1467
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 7] Acc=0.8751 | F1=0.8749
+
+========== ROUND 8 ==========
+[Client 7] Epoch 1/2 | Loss: 0.1294
+[Client 7] Epoch 2/2 | Loss: 0.1366
+[Client 7] Update Norm: 5.0243
+[Client 8] Epoch 1/2 | Loss: 0.0667
+[Client 8] Epoch 2/2 | Loss: 0.0381
+[Client 8] Update Norm: 5.4333
+[Client 22] Epoch 1/2 | Loss: 0.0112
+[Client 22] Epoch 2/2 | Loss: 0.0018
+[Client 22] Update Norm: 5.1083
+[Client 5] Epoch 1/2 | Loss: 0.3790
+[Client 5] Epoch 2/2 | Loss: 0.1885
+[Client 5] Update Norm: 6.6629
+[Client 21] Epoch 1/2 | Loss: 0.0648
+[Client 21] Epoch 2/2 | Loss: 0.0071
+[Client 21] Update Norm: 7.2784
+[Client 26] Epoch 1/2 | Loss: 0.0439
+[Client 26] Epoch 2/2 | Loss: 0.1196
+[Client 26] Update Norm: 6.7191
+[Client 16] Epoch 1/2 | Loss: 0.6202
+[Client 16] Epoch 2/2 | Loss: 0.3300
+[Client 16] Update Norm: 7.9788
+[Client 14] Epoch 1/2 | Loss: 0.2536
+[Client 14] Epoch 2/2 | Loss: 0.0628
+[Client 14] Update Norm: 7.6719
+[Client 15] Epoch 1/2 | Loss: 0.3461
+[Client 15] Epoch 2/2 | Loss: 0.0454
+[Client 15] Update Norm: 5.2747
+[Client 30] Epoch 1/2 | Loss: 0.2028
+[Client 30] Epoch 2/2 | Loss: 0.0704
+[Client 30] Update Norm: 7.8832
+[Client 25] Epoch 1/2 | Loss: 0.1319
+[Client 25] Epoch 2/2 | Loss: 0.3468
+[Client 25] Update Norm: 6.5314
+[Client 1] Epoch 1/2 | Loss: 0.0510
+[Client 1] Epoch 2/2 | Loss: 0.0051
+[Client 1] Update Norm: 5.6737
+[Client 3] Epoch 1/2 | Loss: 0.0543
+[Client 3] Epoch 2/2 | Loss: 0.1069
+[Client 3] Update Norm: 5.8577
+[Client 19] Epoch 1/2 | Loss: 0.0249
+[Client 19] Epoch 2/2 | Loss: 0.1003
+[Client 19] Update Norm: 5.8941
+[Client 11] Epoch 1/2 | Loss: 0.0433
+[Client 11] Epoch 2/2 | Loss: 0.1226
+[Client 11] Update Norm: 5.4562
+[Client 29] Epoch 1/2 | Loss: 0.0207
+[Client 29] Epoch 2/2 | Loss: 0.0656
+[Client 29] Update Norm: 5.9313
+[Client 27] Epoch 1/2 | Loss: 0.0224
+[Client 27] Epoch 2/2 | Loss: 0.0493
+[Client 27] Update Norm: 5.8737
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 22
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 22
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 256
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 1
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 1
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 277
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 8
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4715
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 60.1467
+Norm After  : 59.7257
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 8] Acc=0.8741 | F1=0.8741
+
+========== ROUND 9 ==========
+[Client 6] Epoch 1/2 | Loss: 0.3270
+[Client 6] Epoch 2/2 | Loss: 0.2975
+[Client 6] Update Norm: 5.6224
+[Client 16] Epoch 1/2 | Loss: 0.3612
+[Client 16] Epoch 2/2 | Loss: 0.3921
+[Client 16] Update Norm: 8.2493
+[Client 22] Epoch 1/2 | Loss: 0.1270
+[Client 22] Epoch 2/2 | Loss: 0.0017
+[Client 22] Update Norm: 5.5688
+[Client 8] Epoch 1/2 | Loss: 0.0293
+[Client 8] Epoch 2/2 | Loss: 0.0777
+[Client 8] Update Norm: 4.9625
+[Client 23] Epoch 1/2 | Loss: 0.1550
+[Client 23] Epoch 2/2 | Loss: 0.0487
+[Client 23] Update Norm: 6.2037
+[Client 1] Epoch 1/2 | Loss: 0.0559
+[Client 1] Epoch 2/2 | Loss: 0.0947
+[Client 1] Update Norm: 6.2349
+[Client 19] Epoch 1/2 | Loss: 0.0111
+[Client 19] Epoch 2/2 | Loss: 0.0087
+[Client 19] Update Norm: 6.4677
+[Client 26] Epoch 1/2 | Loss: 0.1001
+[Client 26] Epoch 2/2 | Loss: 0.1464
+[Client 26] Update Norm: 5.6708
+[Client 7] Epoch 1/2 | Loss: 0.1192
+[Client 7] Epoch 2/2 | Loss: 0.0645
+[Client 7] Update Norm: 5.0796
+[Client 15] Epoch 1/2 | Loss: 0.1399
+[Client 15] Epoch 2/2 | Loss: 0.1436
+[Client 15] Update Norm: 5.4423
+[Client 5] Epoch 1/2 | Loss: 0.2812
+[Client 5] Epoch 2/2 | Loss: 0.1891
+[Client 5] Update Norm: 6.3823
+[Client 28] Epoch 1/2 | Loss: 0.5061
+[Client 28] Epoch 2/2 | Loss: 0.2687
+[Client 28] Update Norm: 8.4349
+[Client 3] Epoch 1/2 | Loss: 0.0064
+[Client 3] Epoch 2/2 | Loss: 0.0197
+[Client 3] Update Norm: 5.6709
+[Client 21] Epoch 1/2 | Loss: 0.1403
+[Client 21] Epoch 2/2 | Loss: 0.1138
+[Client 21] Update Norm: 6.2235
+[Client 11] Epoch 1/2 | Loss: 0.0239
+[Client 11] Epoch 2/2 | Loss: 0.0022
+[Client 11] Update Norm: 5.2605
+[Client 27] Epoch 1/2 | Loss: 0.0594
+[Client 27] Epoch 2/2 | Loss: 0.0060
+[Client 27] Update Norm: 5.5238
+[Client 14] Epoch 1/2 | Loss: 0.5514
+[Client 14] Epoch 2/2 | Loss: 0.0218
+[Client 14] Update Norm: 7.0690
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 22
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 22
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 256
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 23
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 23
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 297
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 1
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 1
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 277
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 28
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 28
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 305
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 9
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4669
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 59.7257
+Norm After  : 59.3820
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 9] Acc=0.8758 | F1=0.8751
+
+========== ROUND 10 ==========
+[Client 29] Epoch 1/2 | Loss: 0.0693
+[Client 29] Epoch 2/2 | Loss: 0.0290
+[Client 29] Update Norm: 6.2366
+[Client 11] Epoch 1/2 | Loss: 0.1990
+[Client 11] Epoch 2/2 | Loss: 0.0579
+[Client 11] Update Norm: 5.0986
+[Client 7] Epoch 1/2 | Loss: 0.0690
+[Client 7] Epoch 2/2 | Loss: 0.0512
+[Client 7] Update Norm: 5.3700
+[Client 19] Epoch 1/2 | Loss: 0.0031
+[Client 19] Epoch 2/2 | Loss: 0.1138
+[Client 19] Update Norm: 6.1040
+[Client 8] Epoch 1/2 | Loss: 0.0534
+[Client 8] Epoch 2/2 | Loss: 0.0124
+[Client 8] Update Norm: 4.8843
+[Client 1] Epoch 1/2 | Loss: 0.0034
+[Client 1] Epoch 2/2 | Loss: 0.0081
+[Client 1] Update Norm: 6.5438
+[Client 16] Epoch 1/2 | Loss: 0.4872
+[Client 16] Epoch 2/2 | Loss: 0.1977
+[Client 16] Update Norm: 7.9785
+[Client 26] Epoch 1/2 | Loss: 0.2160
+[Client 26] Epoch 2/2 | Loss: 0.0520
+[Client 26] Update Norm: 6.3607
+[Client 14] Epoch 1/2 | Loss: 0.1558
+[Client 14] Epoch 2/2 | Loss: 0.3357
+[Client 14] Update Norm: 6.7058
+[Client 25] Epoch 1/2 | Loss: 0.0072
+[Client 25] Epoch 2/2 | Loss: 0.0991
+[Client 25] Update Norm: 6.5223
+[Client 3] Epoch 1/2 | Loss: 0.0345
+[Client 3] Epoch 2/2 | Loss: 0.0193
+[Client 3] Update Norm: 5.6056
+[Client 22] Epoch 1/2 | Loss: 0.0014
+[Client 22] Epoch 2/2 | Loss: 0.0704
+[Client 22] Update Norm: 5.2410
+[Client 28] Epoch 1/2 | Loss: 0.3746
+[Client 28] Epoch 2/2 | Loss: 0.2171
+[Client 28] Update Norm: 8.5201
+[Client 6] Epoch 1/2 | Loss: 0.2394
+[Client 6] Epoch 2/2 | Loss: 0.0468
+[Client 6] Update Norm: 5.6819
+[Client 27] Epoch 1/2 | Loss: 0.0114
+[Client 27] Epoch 2/2 | Loss: 0.0123
+[Client 27] Update Norm: 5.9271
+[Client 17] Epoch 1/2 | Loss: 0.2426
+[Client 17] Epoch 2/2 | Loss: 0.0859
+[Client 17] Update Norm: 5.4533
+[Client 15] Epoch 1/2 | Loss: 0.1730
+[Client 15] Epoch 2/2 | Loss: 0.0658
+[Client 15] Update Norm: 6.5828
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 1
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 1
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 277
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 22
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 22
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 256
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 28
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 28
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 305
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 17
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 17
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 294
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 10
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4701
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 59.3820
+Norm After  : 59.0114
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 10] Acc=0.8870 | F1=0.8869
+
+========== ROUND 11 ==========
+[Client 5] Epoch 1/2 | Loss: 0.2970
+[Client 5] Epoch 2/2 | Loss: 0.1721
+[Client 5] Update Norm: 6.0280
+[Client 30] Epoch 1/2 | Loss: 0.1586
+[Client 30] Epoch 2/2 | Loss: 0.0559
+[Client 30] Update Norm: 6.9027
+[Client 25] Epoch 1/2 | Loss: 0.0697
+[Client 25] Epoch 2/2 | Loss: 0.0060
+[Client 25] Update Norm: 6.2036
+[Client 29] Epoch 1/2 | Loss: 0.0539
+[Client 29] Epoch 2/2 | Loss: 0.1011
+[Client 29] Update Norm: 5.2294
+[Client 7] Epoch 1/2 | Loss: 0.0437
+[Client 7] Epoch 2/2 | Loss: 0.0366
+[Client 7] Update Norm: 5.3138
+[Client 26] Epoch 1/2 | Loss: 0.0664
+[Client 26] Epoch 2/2 | Loss: 0.0280
+[Client 26] Update Norm: 6.2295
+[Client 17] Epoch 1/2 | Loss: 0.2819
+[Client 17] Epoch 2/2 | Loss: 0.1805
+[Client 17] Update Norm: 5.4225
+[Client 14] Epoch 1/2 | Loss: 0.2858
+[Client 14] Epoch 2/2 | Loss: 0.4692
+[Client 14] Update Norm: 7.8180
+[Client 15] Epoch 1/2 | Loss: 0.1648
+[Client 15] Epoch 2/2 | Loss: 0.1509
+[Client 15] Update Norm: 5.1730
+[Client 27] Epoch 1/2 | Loss: 0.0087
+[Client 27] Epoch 2/2 | Loss: 0.1673
+[Client 27] Update Norm: 5.5973
+[Client 28] Epoch 1/2 | Loss: 0.3249
+[Client 28] Epoch 2/2 | Loss: 0.2347
+[Client 28] Update Norm: 8.7458
+[Client 21] Epoch 1/2 | Loss: 0.0003
+[Client 21] Epoch 2/2 | Loss: 0.1141
+[Client 21] Update Norm: 7.4725
+[Client 11] Epoch 1/2 | Loss: 0.0938
+[Client 11] Epoch 2/2 | Loss: 0.0342
+[Client 11] Update Norm: 5.4463
+[Client 6] Epoch 1/2 | Loss: 0.6068
+[Client 6] Epoch 2/2 | Loss: 0.0408
+[Client 6] Update Norm: 5.5768
+[Client 23] Epoch 1/2 | Loss: 0.1458
+[Client 23] Epoch 2/2 | Loss: 0.1493
+[Client 23] Update Norm: 6.0779
+[Client 8] Epoch 1/2 | Loss: 0.0963
+[Client 8] Epoch 2/2 | Loss: 0.0213
+[Client 8] Update Norm: 5.5366
+[Client 3] Epoch 1/2 | Loss: 0.0245
+[Client 3] Epoch 2/2 | Loss: 0.0120
+[Client 3] Update Norm: 5.3006
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 17
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 17
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 294
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 28
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 28
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 305
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 23
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 23
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 297
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 11
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4758
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 59.0114
+Norm After  : 58.2723
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 11] Acc=0.8880 | F1=0.8878
+
+========== ROUND 12 ==========
+[Client 16] Epoch 1/2 | Loss: 0.3813
+[Client 16] Epoch 2/2 | Loss: 0.1754
+[Client 16] Update Norm: 8.1717
+[Client 21] Epoch 1/2 | Loss: 0.0965
+[Client 21] Epoch 2/2 | Loss: 0.0196
+[Client 21] Update Norm: 6.0320
+[Client 19] Epoch 1/2 | Loss: 0.0099
+[Client 19] Epoch 2/2 | Loss: 0.0022
+[Client 19] Update Norm: 6.2506
+[Client 23] Epoch 1/2 | Loss: 0.0816
+[Client 23] Epoch 2/2 | Loss: 0.0181
+[Client 23] Update Norm: 6.1964
+[Client 26] Epoch 1/2 | Loss: 0.0234
+[Client 26] Epoch 2/2 | Loss: 0.0122
+[Client 26] Update Norm: 6.6032
+[Client 27] Epoch 1/2 | Loss: 0.0045
+[Client 27] Epoch 2/2 | Loss: 0.0240
+[Client 27] Update Norm: 5.8727
+[Client 3] Epoch 1/2 | Loss: 0.0125
+[Client 3] Epoch 2/2 | Loss: 0.0081
+[Client 3] Update Norm: 4.7933
+[Client 6] Epoch 1/2 | Loss: 0.2043
+[Client 6] Epoch 2/2 | Loss: 0.1032
+[Client 6] Update Norm: 5.1990
+[Client 22] Epoch 1/2 | Loss: 0.0497
+[Client 22] Epoch 2/2 | Loss: 0.0411
+[Client 22] Update Norm: 4.9029
+[Client 25] Epoch 1/2 | Loss: 0.0643
+[Client 25] Epoch 2/2 | Loss: 0.0353
+[Client 25] Update Norm: 6.1887
+[Client 8] Epoch 1/2 | Loss: 0.0200
+[Client 8] Epoch 2/2 | Loss: 0.0307
+[Client 8] Update Norm: 5.5393
+[Client 1] Epoch 1/2 | Loss: 0.0686
+[Client 1] Epoch 2/2 | Loss: 0.0701
+[Client 1] Update Norm: 5.1607
+[Client 15] Epoch 1/2 | Loss: 0.0860
+[Client 15] Epoch 2/2 | Loss: 0.0205
+[Client 15] Update Norm: 5.6929
+[Client 29] Epoch 1/2 | Loss: 0.0316
+[Client 29] Epoch 2/2 | Loss: 0.0252
+[Client 29] Update Norm: 6.1167
+[Client 7] Epoch 1/2 | Loss: 0.1104
+[Client 7] Epoch 2/2 | Loss: 0.0192
+[Client 7] Update Norm: 5.1876
+[Client 28] Epoch 1/2 | Loss: 0.3894
+[Client 28] Epoch 2/2 | Loss: 0.2938
+[Client 28] Update Norm: 7.9131
+[Client 30] Epoch 1/2 | Loss: 0.1382
+[Client 30] Epoch 2/2 | Loss: 0.2449
+[Client 30] Update Norm: 7.2446
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 23
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 23
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 297
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 22
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 22
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 256
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 1
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 1
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 277
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 28
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 28
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 305
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 12
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4826
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 58.2723
+Norm After  : 58.0360
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 12] Acc=0.8873 | F1=0.8871
+
+========== ROUND 13 ==========
+[Client 5] Epoch 1/2 | Loss: 0.2279
+[Client 5] Epoch 2/2 | Loss: 0.3423
+[Client 5] Update Norm: 6.2592
+[Client 3] Epoch 1/2 | Loss: 0.0292
+[Client 3] Epoch 2/2 | Loss: 0.0171
+[Client 3] Update Norm: 5.0556
+[Client 14] Epoch 1/2 | Loss: 0.4053
+[Client 14] Epoch 2/2 | Loss: 0.3524
+[Client 14] Update Norm: 6.8738
+[Client 30] Epoch 1/2 | Loss: 0.1938
+[Client 30] Epoch 2/2 | Loss: 0.0542
+[Client 30] Update Norm: 7.3768
+[Client 29] Epoch 1/2 | Loss: 0.0300
+[Client 29] Epoch 2/2 | Loss: 0.1436
+[Client 29] Update Norm: 5.7948
+[Client 17] Epoch 1/2 | Loss: 0.0569
+[Client 17] Epoch 2/2 | Loss: 0.2389
+[Client 17] Update Norm: 6.6362
+[Client 26] Epoch 1/2 | Loss: 0.1025
+[Client 26] Epoch 2/2 | Loss: 0.1107
+[Client 26] Update Norm: 6.5993
+[Client 15] Epoch 1/2 | Loss: 0.2118
+[Client 15] Epoch 2/2 | Loss: 0.1723
+[Client 15] Update Norm: 5.2773
+[Client 6] Epoch 1/2 | Loss: 0.1156
+[Client 6] Epoch 2/2 | Loss: 0.0428
+[Client 6] Update Norm: 5.7354
+[Client 7] Epoch 1/2 | Loss: 0.1735
+[Client 7] Epoch 2/2 | Loss: 0.0028
+[Client 7] Update Norm: 5.2511
+[Client 25] Epoch 1/2 | Loss: 0.0098
+[Client 25] Epoch 2/2 | Loss: 0.0964
+[Client 25] Update Norm: 6.5172
+[Client 28] Epoch 1/2 | Loss: 0.3688
+[Client 28] Epoch 2/2 | Loss: 0.1944
+[Client 28] Update Norm: 8.9605
+[Client 21] Epoch 1/2 | Loss: 0.3439
+[Client 21] Epoch 2/2 | Loss: 0.0231
+[Client 21] Update Norm: 6.0196
+[Client 27] Epoch 1/2 | Loss: 0.0297
+[Client 27] Epoch 2/2 | Loss: 0.0068
+[Client 27] Update Norm: 5.2485
+[Client 8] Epoch 1/2 | Loss: 0.0162
+[Client 8] Epoch 2/2 | Loss: 0.0167
+[Client 8] Update Norm: 5.0822
+[Client 19] Epoch 1/2 | Loss: 0.0289
+[Client 19] Epoch 2/2 | Loss: 0.0126
+[Client 19] Update Norm: 5.6964
+[Client 11] Epoch 1/2 | Loss: 0.0202
+[Client 11] Epoch 2/2 | Loss: 0.0611
+[Client 11] Update Norm: 5.0561
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 17
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 17
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 294
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 28
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 28
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 305
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 13
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4749
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 58.0360
+Norm After  : 57.6217
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 13] Acc=0.8901 | F1=0.8903
+
+========== ROUND 14 ==========
+[Client 25] Epoch 1/2 | Loss: 0.0024
+[Client 25] Epoch 2/2 | Loss: 0.1936
+[Client 25] Update Norm: 6.0317
+[Client 14] Epoch 1/2 | Loss: 0.9762
+[Client 14] Epoch 2/2 | Loss: 0.1203
+[Client 14] Update Norm: 7.5062
+[Client 30] Epoch 1/2 | Loss: 0.1918
+[Client 30] Epoch 2/2 | Loss: 0.0507
+[Client 30] Update Norm: 8.2048
+[Client 22] Epoch 1/2 | Loss: 0.1092
+[Client 22] Epoch 2/2 | Loss: 0.0016
+[Client 22] Update Norm: 5.0356
+[Client 11] Epoch 1/2 | Loss: 0.0353
+[Client 11] Epoch 2/2 | Loss: 0.2288
+[Client 11] Update Norm: 5.3797
+[Client 6] Epoch 1/2 | Loss: 0.0556
+[Client 6] Epoch 2/2 | Loss: 0.2452
+[Client 6] Update Norm: 5.7156
+[Client 3] Epoch 1/2 | Loss: 0.0362
+[Client 3] Epoch 2/2 | Loss: 0.0203
+[Client 3] Update Norm: 5.0958
+[Client 17] Epoch 1/2 | Loss: 0.0405
+[Client 17] Epoch 2/2 | Loss: 0.1946
+[Client 17] Update Norm: 5.7416
+[Client 26] Epoch 1/2 | Loss: 0.0200
+[Client 26] Epoch 2/2 | Loss: 0.2942
+[Client 26] Update Norm: 6.1525
+[Client 8] Epoch 1/2 | Loss: 0.3348
+[Client 8] Epoch 2/2 | Loss: 0.0248
+[Client 8] Update Norm: 5.2012
+[Client 21] Epoch 1/2 | Loss: 0.0014
+[Client 21] Epoch 2/2 | Loss: 0.1002
+[Client 21] Update Norm: 6.4048
+[Client 27] Epoch 1/2 | Loss: 0.0249
+[Client 27] Epoch 2/2 | Loss: 0.0067
+[Client 27] Update Norm: 5.3284
+[Client 29] Epoch 1/2 | Loss: 0.0679
+[Client 29] Epoch 2/2 | Loss: 0.0368
+[Client 29] Update Norm: 6.1566
+[Client 1] Epoch 1/2 | Loss: 0.0359
+[Client 1] Epoch 2/2 | Loss: 0.0974
+[Client 1] Update Norm: 5.9388
+[Client 19] Epoch 1/2 | Loss: 0.0088
+[Client 19] Epoch 2/2 | Loss: 0.0644
+[Client 19] Update Norm: 6.1471
+[Client 16] Epoch 1/2 | Loss: 0.3744
+[Client 16] Epoch 2/2 | Loss: 0.3367
+[Client 16] Update Norm: 8.3178
+[Client 15] Epoch 1/2 | Loss: 0.0406
+[Client 15] Epoch 2/2 | Loss: 0.0025
+[Client 15] Update Norm: 5.6380
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 22
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 22
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 256
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 17
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 17
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 294
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 8
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 8
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 224
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 1
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 1
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 277
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 16
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 16
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 292
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 14
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4782
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 57.6217
+Norm After  : 57.3939
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 14] Acc=0.8809 | F1=0.8807
+
+========== ROUND 15 ==========
+[Client 3] Epoch 1/2 | Loss: 0.0387
+[Client 3] Epoch 2/2 | Loss: 0.0181
+[Client 3] Update Norm: 5.4332
+[Client 21] Epoch 1/2 | Loss: 0.0721
+[Client 21] Epoch 2/2 | Loss: 0.0949
+[Client 21] Update Norm: 5.6108
+[Client 17] Epoch 1/2 | Loss: 0.0393
+[Client 17] Epoch 2/2 | Loss: 0.0679
+[Client 17] Update Norm: 5.7035
+[Client 6] Epoch 1/2 | Loss: 0.3297
+[Client 6] Epoch 2/2 | Loss: 0.1856
+[Client 6] Update Norm: 5.1462
+[Client 14] Epoch 1/2 | Loss: 0.8069
+[Client 14] Epoch 2/2 | Loss: 1.0804
+[Client 14] Update Norm: 7.1106
+[Client 11] Epoch 1/2 | Loss: 0.0472
+[Client 11] Epoch 2/2 | Loss: 0.0073
+[Client 11] Update Norm: 5.7471
+[Client 27] Epoch 1/2 | Loss: 0.0020
+[Client 27] Epoch 2/2 | Loss: 0.0097
+[Client 27] Update Norm: 5.7634
+[Client 15] Epoch 1/2 | Loss: 0.0781
+[Client 15] Epoch 2/2 | Loss: 0.0463
+[Client 15] Update Norm: 5.3626
+[Client 26] Epoch 1/2 | Loss: 0.0715
+[Client 26] Epoch 2/2 | Loss: 0.0563
+[Client 26] Update Norm: 5.9564
+[Client 5] Epoch 1/2 | Loss: 0.3768
+[Client 5] Epoch 2/2 | Loss: 0.1941
+[Client 5] Update Norm: 6.0448
+[Client 25] Epoch 1/2 | Loss: 0.2300
+[Client 25] Epoch 2/2 | Loss: 0.0458
+[Client 25] Update Norm: 6.3157
+[Client 19] Epoch 1/2 | Loss: 0.0047
+[Client 19] Epoch 2/2 | Loss: 0.0475
+[Client 19] Update Norm: 6.3218
+[Client 7] Epoch 1/2 | Loss: 0.0535
+[Client 7] Epoch 2/2 | Loss: 0.0128
+[Client 7] Update Norm: 4.8705
+[Client 29] Epoch 1/2 | Loss: 0.0744
+[Client 29] Epoch 2/2 | Loss: 0.0478
+[Client 29] Update Norm: 5.0384
+[Client 30] Epoch 1/2 | Loss: 0.2336
+[Client 30] Epoch 2/2 | Loss: 0.1254
+[Client 30] Update Norm: 6.6100
+[Client 1] Epoch 1/2 | Loss: 0.0028
+[Client 1] Epoch 2/2 | Loss: 0.0306
+[Client 1] Update Norm: 5.4790
+[Client 23] Epoch 1/2 | Loss: 0.1021
+[Client 23] Epoch 2/2 | Loss: 0.2069
+[Client 23] Update Norm: 5.9201
+
+[SERVER] ===== Collecting Client Updates =====
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 3
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 3
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 272
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 21
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 21
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 326
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 17
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 17
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 294
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 6
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 6
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 260
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 14
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 14
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 258
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 11
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 11
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 252
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 27
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 27
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 300
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 15
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 15
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 262
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 26
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 26
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 313
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 5
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 5
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 241
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 25
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 25
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 327
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 19
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 19
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 288
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 7
+Size (bytes)   : 1059902
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 7
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 246
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 29
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 29
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 275
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 30
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 30
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 306
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 1
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 1
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 277
+[STATUS] Payload Safe
+
+[PACKET ANALYSIS]
+Round          : 15
+Client         : 23
+Size (bytes)   : 1059903
+Size (KB)      : 1035.06
+Keys           : ['client_id', 'weights', 'num_samples']
+Privacy Risk   : False
+
+[PAYLOAD INSPECTION] Client 23
+--------------------------------------------------
+Payload Keys:
+ -> client_id
+ -> weights
+ -> num_samples
+Layers Sent     : 25
+Parameters Sent : 262985
+Samples Used    : 297
+[STATUS] Payload Safe
+
+[SERVER] ===== Validation Summary =====
+Clients Received : 17
+Total Samples    : 4794
+[SERVER] All payloads validated successfully.
+
+[SERVER] ===== FedAvg Aggregation =====
+[SERVER] Aggregation Complete
+
+[SERVER] ===== Updating Global Model =====
+[SERVER] Model Updated Successfully
+Norm Before : 57.3939
+Norm After  : 56.8984
+
+[SERVER] ===== Broadcasting Global Model =====
+[SERVER] Model sent to Client 1
+[SERVER] Model sent to Client 3
+[SERVER] Model sent to Client 5
+[SERVER] Model sent to Client 6
+[SERVER] Model sent to Client 7
+[SERVER] Model sent to Client 8
+[SERVER] Model sent to Client 11
+[SERVER] Model sent to Client 14
+[SERVER] Model sent to Client 15
+[SERVER] Model sent to Client 16
+[SERVER] Model sent to Client 17
+[SERVER] Model sent to Client 19
+[SERVER] Model sent to Client 21
+[SERVER] Model sent to Client 22
+[SERVER] Model sent to Client 23
+[SERVER] Model sent to Client 25
+[SERVER] Model sent to Client 26
+[SERVER] Model sent to Client 27
+[SERVER] Model sent to Client 28
+[SERVER] Model sent to Client 29
+[SERVER] Model sent to Client 30
+[SERVER] Broadcast Complete
+[ROUND 15] Acc=0.8839 | F1=0.8840
+C:\Users\Manas\Documents\Playground\capstone_project\main.py:685: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  torch.load("results/federated_best.pth", map_location=device)
+Saved: results/federated_history.csv
+
+========== Federated TEST ==========
+Loss     : 0.6649
+Accuracy : 0.8901
+F1 Score : 0.8903
+
+Confusion Matrix:
+[[491   3   2   0   0   0]
+ [ 14 418  33   6   0   0]
+ [  9  19 392   0   0   0]
+ [  0   3   0 398  90   0]
+ [  0   0   0 118 414   0]
+ [  0  27   0   0   0 510]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Walking     0.9553    0.9899    0.9723       496
+    Upstairs     0.8894    0.8875    0.8884       471
+  Downstairs     0.9180    0.9333    0.9256       420
+     Sitting     0.7625    0.8106    0.7858       491
+    Standing     0.8214    0.7782    0.7992       532
+      Laying     1.0000    0.9497    0.9742       537
+
+    accuracy                         0.8901      2947
+   macro avg     0.8911    0.8915    0.8909      2947
+weighted avg     0.8913    0.8901    0.8903      2947
+
+Saved: results/federated_classification_report.csv
+Saved: results/federated_confusion_matrix.png
+Saved: results/federated_confusion_matrix.csv
+Saved: results/federated_top_confusions.csv
+Saved: results/federated_confusion_matrix_percent.png
+
+========== PACKET ANALYSIS ==========
+
+========== PACKET SUMMARY ==========
+Total Packets       : 255
+Total Bytes         : 270275216
+Average Size (KB)   : 1035.06
+Max Size (KB)       : 1035.06
+Privacy Risks Found : 0
+
+Saved: results\packet_analysis.csv
+Saved: results\packet_analysis.json
+
+========== MODEL COMPARISON ==========
+      Model  Accuracy  F1 Score   Loss  Training Time (sec)  Rounds Privacy
+Centralized    0.9223    0.9216 0.2064                33.95       0     Low
+  Federated    0.8901    0.8903 0.6649                35.38      15    High
+
+Saved: results\comparison_table.csv
+Saved: results\comparison_scores.png
+Saved: results\comparison_loss.png
+Saved: results\comparison_time.png
+Saved: results\comparison_privacy.png
+Saved: results\comparison_rounds.png
+
+========== FINAL ANALYSIS ==========
+Accuracy Gap : 0.0322
+F1 Gap       : 0.0313
+
+Centralized model performs better.
+Privacy Winner : Federated Learning
+Centralized training is faster.

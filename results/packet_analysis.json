@@ -1,0 +1,3827 @@
+[
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "6719097cb5ed3a4013a3428c22af26a0"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "a8aa672e79a7624447496754c5c57a08"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 1,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "fb19ab84f01b4b840f1b5e201223aa84"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "045089f373858a84774793570c77ee52"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "ee6ed60b724ed0a33be2dd3d41e82889"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b41937104f20c2ff1c995ac39f56ea91"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "042ca4533f94e4691a0b05f49a053805"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "162c3ac524818b3a4fd4887d92ac91e4"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f59d035ecdc83ccf1839834f5097ae13"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 17,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8fd589772727fdb4e5828d85b0f0db1c"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "20d0069c2f46fcc5164cc55e8c94ccba"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "c18d44e947bf0478f5d3a1e6c6c4be6b"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b83f314d7ae2e6f5772ec48fcf8f1e6b"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 28,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "53769f4bb485434665b7c94bdb1807eb"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f3ad216ecd9ecca8e1d111437877b05c"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 22,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8fb7ca0588b988c27f072efb101b6db3"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:03",
+        "round": 1,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "a7b5b871da33a2301ad9801873eb9523"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "3396caa9b2bf2c3a0537610099705d9c"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "5b00c63ea92da5f2c90f45fe56c7f99f"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 1,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b1d153170f5ed4b190a55c373901fcc1"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "77e30c55e5146fc824c58fb576cdd452"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "2809b6fd688024767e1c7be9a8b81cd9"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 22,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "5a45a54ee3b76f588c01ed5045f37fdd"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f6e7059d4c7cfd438e43391f18e73279"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "9127030bd1cd7aae799483a76bb95b0e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "631d15d32d2031af5d2d632d29324bf8"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "4bccb9d002556ecdcdb58c75be609bed"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 28,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b6f23bb1f9859ff28662cb84d5686082"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "95f08f647224c80b5ac8a57460cb8d72"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "095e94242a16acab917ca80dff278947"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "1aa624c306e0e1aa3a8346e92b37ede2"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "1fec12aefeb10c51729e55f0d9049a50"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e0796282ed718c0838fbdbb8e7b62ff9"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:04",
+        "round": 2,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b85b72d354e03925275aba9601e771f3"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 17,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "833e14066332fc445d9d8049b878b0ed"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "422f7d80e2743c37814dbb92512227eb"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "2052044baa1258784fbea81b7f8b7770"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b5414bd7d67fa9d8bbd907a5a31e7d70"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "55f1ee9a733c565f914e5f6b2bb18b5e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "39f444286193060161309db9f1490f5e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 22,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "6e30d1e8f7fcc2e07470ffa33f10f924"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "cbce32a7766b5dc30999231a111d5c97"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "6a95678fa541643a53edc3c4ac635732"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "17d9329fe737fc0cee72f1ca53597df5"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 1,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "0d2c15fabdbc5b5d3fca8d5c3949bfdc"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "a6e6d79374fa30dab3da73a00dea6a77"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "36afd45b835c14935db72c5696dcce98"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "675fb11fd4954a6fba09acb3091fc820"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "c4cef380f14c8c6b0d7c9d246a1f04ca"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b77e8cec034ace86ea7f6e9086d41b2b"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:06",
+        "round": 3,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e8e0bc54b9847b175836bffb5ed47167"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "9c6bf0739f3d8171ca18b8be6ecc48e5"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "7329bcf9eff25a56db7166fa60048cf1"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "7f8292163da5b756c74584a931ed24eb"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "7ec955ccdff98066d6ea5e16bfdbd2c0"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "1ae77ba9771f9eec443bf9c866599a2e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "15579e53cf309dfeda5e4a2a6a2c48e4"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 17,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "2ab24b9fa84b3f9fcf8c8d891e239075"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "24dfee30654ed72e8eb3591c8d7e0add"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "1b3a43545cdcf9a45677ec1795a4d1f5"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "616b855ed8b0697447034b75e1401fc7"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "2cd5dce2ace82adb878340a9a1462659"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 22,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "4318ca91f034826217887d5e460a06da"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 23,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "209948dafc6c9db3a1d673f3825fb199"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "32181c4bca0c2ca41bdc3e82ce939519"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "745da56b1b008ea8a540298512eac922"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "fe6dd5116b9355d2990671a978e41afd"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:09",
+        "round": 4,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "63b6f93b8d5cda003ae3b05eee6c80e5"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "86f98e186bd9938c845611e6095a56fd"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8d0991a0275b9573c97d5a6016f42ba4"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "ce5f16a0965b35841947a9d76b51b9ab"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8d6a9f8514ac82f4510a94424e073c05"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "ab85473f60dab92fa9b0c4c4948cb060"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "70dcc22c6264148044154fdf851c8f5d"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e9691483e3bf808b52d6594ac73c9155"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 17,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "2009d323473abdf5dbdcc16ad3dda4a9"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "5887ee3e1a784dc20fbe94b19ba67af9"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "942d9abeac98cf84496a81989bf06ae5"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "cbffe68d78db16503339011320b3bb3c"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e7067da5949fc72ebbbce8c527c56fd2"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "a97cf9f7c4038ed2a16fe479318fe47f"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d088b0bd82a7169f028429c1b7cb0c8d"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 23,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "76d722a3d141625da4846ee2f84a4dec"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "59d1479444a63a75cf7656d1f1c8088e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:11",
+        "round": 5,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f63e1a8015633d288b36b1ebf61210af"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "9743e381b5f052e2ffef206f537ef4bd"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 17,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "00c4bcc67bfb82421d86df91c03b440f"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d64208ef37c5498570dfa6a4f3b268d1"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "fe9d0745960bcc4d3f1d93fd84f673f5"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 28,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "cc1298c808d1fc3267f5b00b3f00abe4"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e0d38166f0bd71d02dd4dc515d1cdb59"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e6762ec4e35942e62ccd11a37df4b4e9"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "aa9358e1a0af15fafbdc7150ffaec712"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "ac367b598333557c004070d1ba240cc9"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "31302fcf0a27da77141c8d48951df4ee"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d883060bb4421df094b63f76a9a225a6"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "aad8024b2d3155583d75ae8f9811a67f"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d9a3f0d14770fc1f855c071e1abb0960"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "548bf1f1324816b283a6f3296d8a49d3"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "3d41943d617fa5959a58bcd1792952cf"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "a77a1228417b2a4504e3f3bc484ee016"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:14",
+        "round": 6,
+        "client_id": 23,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "7eda21586014b958b6d56a0deb6f0da8"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d6a2db6039740c3fc9b3cc32fc6039cd"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "45671ca2d41b8f546ab64da5e0377d16"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d9d91e2d0abf2977a76d6e19c17477b4"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e22839ad04d0fb054147946f2a9384fc"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "52f197e3d651fb77eb3f79cebd1f39e2"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 22,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "3c5051f927cb15f958c4144dd2e6b390"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 23,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "77c25eecf72f96f384bcaf3d87e2282e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "1059e5ef82e623211ba9d01f6b7225ec"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "cf36aa0a78c0b47a1745bd406ef2fc4d"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "7773ffa6a0b82166d5919214e414c881"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "7b222d30ff291b193e6c018ed8220770"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "efc487566a5667ef967f2e50d0090088"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e869780a98f45f42f6c7073b364a728a"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f3563e9faf1010b9610b7e5afe4fc233"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 1,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e37adb8d62c85bdbff2ca7be2b459f6d"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "cdd9f66c42e6830beb409f3ec8cbc193"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:16",
+        "round": 7,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "754e91221a3cdbdbe5417f4054e43b04"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "9c1e4d9d5ccfc00ab8eb009ccbf192d5"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f1111f21f0b6910b37d9adf2a24154fd"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 22,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "daff6028fa6468bfe5c2866fefea03c0"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "a27d48ddbc96006cd88977e4d39ac6c9"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "3608c9d68a0dc4dab5ca503bde3db628"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "95dc2344d38023054971c7e3f8c8c7ad"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "a40395fc9feec43301c1ed40abe3ceb6"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e2d256a66f64bbecb1a5a03978dfd666"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d56b7a16eb181d7070c6a4c4f953b9c7"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "2f87732ddfd1df9964132692eee6acdf"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f5cc299cb4da958c283dcb4c2ce58af0"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 1,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "2eccac0e7812ecb8bf9551cf4225191e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "bdf5fc5dfb35c4c9170774bbbb402f02"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "1743176a5331f36521b7f7868443ad0b"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f8d7a04443ed5a5904db3de90a7efc17"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "0f5f5a5af5fb571e659f8b4adc519197"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:19",
+        "round": 8,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "7c84a69a1f8dc720ca2581b842ccb9d7"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "5f4a59b68509a31b355b8fc362664a7c"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "df806bc0ac2931a14946561750a772a6"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 22,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "a2922120084c2c75c4bd2eaca0a4bdb4"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "a0989ccdaada79bb9ca1d12caeff3b81"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 23,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d583d384a1755bf25f1ba9dfbcfb5cb1"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 1,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "da9589ed7132ad954a21c736d49948f4"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "ae4dbca87292b9fc3985a481548c6f37"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "13bdb49164409a94d2b0e3f1b4068c5a"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "3e813a7bec12a3d0ced9dec6d543f09f"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "31eb736c1d1b8f4c9fba6861a8f1cb41"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "3498fbb7cf92250a8ad8e889371a6694"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 28,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d1058c7aa76bdd650c202a67ed172136"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f43c7ce87cb70a08aadf0b75bc86add5"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8002620cb3027cdb106fa35b9fce5bb6"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "930c8a3326051096e0e73f5841eac578"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "3023b97ba0dbe65c3687c526b870f3ae"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:22",
+        "round": 9,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "0a65852ac848ce953ac0b0d7c4adb200"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "85f8a84944971dca1848bfb76046fd7a"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "425a682e9e5b8fcc4e23b092eb33c9ca"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f3d50f2a043856be66579acd8952f078"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "85bf91ee19abf09c0f6600697224f0bb"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "651b179a14b4e2897ff6aec20ebdd95b"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 1,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b47969e4b2c0210d80192291f21c7b23"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "a62022f7b29456e1def855dc023e720b"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "ebcea351b28284f5cc1fcb957bda2528"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "0c3029d1e9596cbee9e0992b12ded11c"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e99223828743ca40f67cd9de008e3154"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "388c3972a906607d9c8c82b13cb28f30"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 22,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "fc0fef0962d23c78c112fbaa7f21311e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 28,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "c36ccdb54557381818d79b22a92bfda7"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "19f2721003d95ff6d07ef14d4f35ced8"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "ea28aa1de1e0e355e87c01e8f30d865d"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 17,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "378e734c4431c076d71e8bb6fe65acdd"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:25",
+        "round": 10,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "316ff3dd98ec177a347431565d78ce73"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "47e9c558b2e324173238a05e71ec014d"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8a6fc33129ba089c0287b7cb014675f3"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "0b15df43cae8bc49dd447933785e1c13"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f61b95f43c2d16e456e1a8453670f206"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f712277f3cc466d20d515b2f7484b3c6"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "942f39cf13328f17c320a8e17c265e2c"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 17,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f78b56b935d647c3727bb10471d139e1"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "84e8ece1a4b97fb297dfec494f3f4091"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8517bd80da22fa70427f87c0da5cf123"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b2d45fc6b5ff7958e83d3124abc2090e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 28,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e6d21eaa21a01347e4d83eb010221fad"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "4b9102b1a23b12a557bb58abb995bd41"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "460ce54311607e7c31747de213bd6c6a"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "aeebceeb4fd46ef72ee8751238412550"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 23,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "0e416dbdffce01c323570cb22d6dec2e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "84e24877bdc2c6f1621ea9018b02da7d"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:27",
+        "round": 11,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "144d241086d470836ccf5a5f75b8b200"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:29",
+        "round": 12,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "c2aabf080c21f7cb717bf88191a622c0"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:29",
+        "round": 12,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "349326b36f131b1d967e881bf5463ae4"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:29",
+        "round": 12,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "196badaca18966af95ece51ea3db015a"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:29",
+        "round": 12,
+        "client_id": 23,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f920775b4bde171938812862cad1a815"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:29",
+        "round": 12,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "bb4b18260a5ca13af0f7cac947184047"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:29",
+        "round": 12,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "964009872509ad69172cebaebe7ba5a6"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:29",
+        "round": 12,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8642d272b90cf03bd9f2154709aa2365"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:29",
+        "round": 12,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e074862dcfb0475240968feb959838d0"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:29",
+        "round": 12,
+        "client_id": 22,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "5e64526c517236be45f256c0ec7f78c9"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:30",
+        "round": 12,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e944a13439689b33feacb6239c0545d1"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:30",
+        "round": 12,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b8e80ad9c2d08dbec799e8ece484aecb"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:30",
+        "round": 12,
+        "client_id": 1,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "9cca59cf2c6d8ae42237939eaa2a459c"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:30",
+        "round": 12,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "6a7dcff05febe9f84b90f513fc889621"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:30",
+        "round": 12,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "534af4053fbf8bd39a7b1a532176ba51"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:30",
+        "round": 12,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8b32a11c2d684a4db054ae7b59fa8b3b"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:30",
+        "round": 12,
+        "client_id": 28,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "ad783f3c41c88caf183b75b0005a53b7"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:30",
+        "round": 12,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "ef10e3e5daa22b01f913ac22b4d92a89"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "68d27a3dc5fe656354792ec2f917b13c"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "1a0d7953ab069e4ed180aa4624f0e5d6"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "477bb3e33a63780d444e16e3816aa37e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "50627e7e1984c82e4bfe0de8d6cb6e80"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "cecafa5b0cec557dbf10a7aea491889f"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 17,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "bdac8dc1453cafc77e21ae28ab461a9e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "7243077ced894aac1d1f58f3e9dbfde6"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "fb9afdce044b925fa2a07c3e2dc36b71"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "3d9396c83a952d0b5f7a13e288f1b600"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "06c8864666a8a6f8440660ae3255a137"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "db148bcd2416353e979849b84c78d9eb"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:31",
+        "round": 13,
+        "client_id": 28,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "01655b4aceb47672bcaf18735a42c972"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:32",
+        "round": 13,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "407d70e21250e9fd65e67169021716d4"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:32",
+        "round": 13,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "0afd4a7c29de5a86dbc70b10cdc6f655"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:32",
+        "round": 13,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "ec3950c91b0df7f076e4f6716bad04f7"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:32",
+        "round": 13,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "b09ed51f7c00a16f6fbb02e085bb2e22"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:32",
+        "round": 13,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "393114507cb5ffe4760ab92a24ce3955"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "3ab1be4b94e0af41d310820bdbcf2fd6"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "3d95a126d497cb22b6a568c6ff416d6b"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "1ca83b9758ddbe005d1f27241b529d98"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 22,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "bf1c7f635afcce36c953a79128662dfe"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "79c97e859d4c0bf1555419439b7a7056"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "68fd3cce8d7996d12506f089be9f53d7"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "138a7b6bc466700e44d02cf4b9f7ad8f"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 17,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "cb44b1d00d341b4fb7dac62aad80094e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e902a9c2a2509e83cd4b54fcbf98cd3a"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 8,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "601ece4553dc36d4e388715de7b104c0"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "1cc81042e17b0650df117546f7266180"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:33",
+        "round": 14,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d46e29b592fe658c47e5528e9ea6f92e"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:34",
+        "round": 14,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "6e21b9c575e651c2f70d5fbf9bc79678"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:34",
+        "round": 14,
+        "client_id": 1,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8902d0a149203051831fbd6ca7b76c84"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:34",
+        "round": 14,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8436d46f28142786f02ee78a44a9fbcd"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:34",
+        "round": 14,
+        "client_id": 16,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "d85080cd087ad0429b9438e8f17069a7"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:34",
+        "round": 14,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "84c435af28442102fe41024f473d4367"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 3,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "5abf8b3275457c9a7799c0e419fa4a82"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 21,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "c52bb594504afad61132cf05bc7df766"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 17,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "04fa4f2782a30dd8dbbb1fe787f8dbf2"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 6,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "f634f70e8abc9d19c1d6b0d82042dcee"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 14,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "59df5c88394bbd8f9302a51094848847"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 11,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "be0b1249a23d61bd703101711af8501a"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 27,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "bd7596b923764a09c1450342992cd324"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 15,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "291f4d9315d4ac88654e7d024a9e7661"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 26,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "1c89b5cad6a0dbba450db1005b042664"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 5,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "8474a85c90da98f6045645445c00e7cc"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 25,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "0b63867846251a8e780b960e06c7994c"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 19,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e32600d5ec763cc4244bc3fab9283901"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 7,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059902,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "9e0306e45277435c39c329dbf9c37b92"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 29,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "e171bf3b1bbf77daca4f9213d0b3d50a"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 30,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "deacbe5ceb10d185a98f592efa1e43d6"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 1,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "53666290554728de4d9a5b9b7340db58"
+    },
+    {
+        "timestamp": "2026-05-08 17:58:36",
+        "round": 15,
+        "client_id": 23,
+        "payload_keys": [
+            "client_id",
+            "weights",
+            "num_samples"
+        ],
+        "payload_size_bytes": 1059903,
+        "payload_size_kb": 1035.06,
+        "privacy_risk": false,
+        "risky_key": null,
+        "payload_hash": "55b19eb7e35b5ddffa27cf30c3af09ad"
+    }
+]
